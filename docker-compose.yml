@@ -22,5 +22,5 @@ services:
       TZ: "Europe/Berlin"
       # DEBUG: "*"
     volumes:
-      - ./zigbee2mqtt/data:/app/data
+      - ./zigbee2mqtt:/app/data
       - /run/udev:/run/udev:ro
