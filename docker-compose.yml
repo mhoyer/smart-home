@@ -24,3 +24,14 @@ services:
     volumes:
       - ./zigbee2mqtt:/app/data
       - /run/udev:/run/udev:ro
+
+  homeassistant:
+    container_name: homeassistant
+    image: homeassistant/raspberrypi4-homeassistant:0.105.4
+    restart: always
+    environment:
+      TZ: "Europe/Berlin"
+    volumes:
+      - ./homeassistant:/config
+    ports:
+      - "8123:8123"
