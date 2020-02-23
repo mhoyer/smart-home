@@ -1,11 +1,22 @@
 homeassistant: true
 permit_join: true
-
 mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://mosquitto'
-  # user: my_user
-  # password: my_password
-
 serial:
   port: /dev/ttyACM0
+advanced:
+  log_level: debug
+  baudrate: 115200
+  report: false
+devices:
+  '0x7cb03eaa00ac909d':
+    friendly_name: '20200223-osram-cla60-e27-rgbw-01'
+  '0x7cb03eaa00aa112a':
+    friendly_name: '20200223-osram-cla60-e27-rgbw-02'
+  '0x7cb03eaa00adacd7':
+    friendly_name: '20200223-osram-cla60-e27-rgbw-03'
+  '0x7cb03eaa00ada7f5':
+    friendly_name: '20200223-osram-cla60-e27-rgbw-04'
+  '0x680ae2fffe314a4e':
+    friendly_name: '20200223-ikea-tradfri-e1810-remote-control-01'
