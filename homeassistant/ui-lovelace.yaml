@@ -1,0 +1,36 @@
+title: Home
+views:
+  - path: default_view
+    title: Home
+    badges:
+      - entity: binary_sensor.updater
+      - entity: person.marcel_hoyer
+      - entity: sun.sun
+    cards:
+      - type: light
+        entity: light.0x7cb03eaa00ac909d_light
+      - type: light
+        entity: light.0x7cb03eaa00aa112a_light
+      - type: light
+        entity: light.0x7cb03eaa00adacd7_light
+      - type: light
+        entity: light.0x7cb03eaa00ada7f5_light
+      - type: entities
+        entities:
+          - sensor.0x7cb03eaa00aa112a_linkquality
+      - type: entities
+        entities:
+          - sensor.0x7cb03eaa00adacd7_linkquality
+      - type: entities
+        entities:
+          - sensor.0x7cb03eaa00ac909d_linkquality
+      - type: entities
+        entities:
+          - sensor.0x7cb03eaa00ada7f5_linkquality
+      - entity: weather.home
+        type: weather-forecast
+      - type: entities
+        entities:
+          - sensor.0x680ae2fffe314a4e_action
+          - sensor.0x680ae2fffe314a4e_battery
+          - sensor.0x680ae2fffe314a4e_linkquality

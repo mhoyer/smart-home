@@ -2,6 +2,8 @@ default_config:
 
 http:
   base_url: r2d2:8123
+lovelace:
+  mode: yaml
 tts:
   - platform: google_translate
 
