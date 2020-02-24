@@ -1,0 +1,8 @@
+*.log
+
+homeassistant/.HA_VERSION
+homeassistant/.storage/
+homeassistant/home-assistant_v2.db
+
+zigbee2mqtt/log
+
