@@ -12,32 +12,32 @@ views:
       - entity: sun.sun
     cards:
       - type: light
-        entity: light.0x7cb03eaa00ac909d_light
+        entity: light.20200223_osram_cla60_e27_rgbw_01_light
       - type: light
-        entity: light.0x7cb03eaa00aa112a_light
+        entity: light.20200223_osram_cla60_e27_rgbw_02_light
       - type: light
-        entity: light.0x7cb03eaa00adacd7_light
+        entity: light.20200223_osram_cla60_e27_rgbw_03_light
       - type: light
-        entity: light.0x7cb03eaa00ada7f5_light
+        entity: light.20200223_osram_cla60_e27_rgbw_04_light
       - type: entities
         entities:
-          - sensor.0x7cb03eaa00aa112a_linkquality
+          - sensor.20200223_osram_cla60_e27_rgbw_01_linkquality
       - type: entities
         entities:
-          - sensor.0x7cb03eaa00adacd7_linkquality
+          - sensor.20200223_osram_cla60_e27_rgbw_02_linkquality
       - type: entities
         entities:
-          - sensor.0x7cb03eaa00ac909d_linkquality
+          - sensor.20200223_osram_cla60_e27_rgbw_03_linkquality
       - type: entities
         entities:
-          - sensor.0x7cb03eaa00ada7f5_linkquality
+          - sensor.20200223_osram_cla60_e27_rgbw_04_linkquality
       - entity: weather.home
         type: weather-forecast
       - type: entities
         entities:
-          - sensor.0x680ae2fffe314a4e_action
-          - sensor.0x680ae2fffe314a4e_battery
-          - sensor.0x680ae2fffe314a4e_linkquality
+          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_action
+          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_battery
+          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_linkquality
   - title: Zigbee Network
     panel: true # this renders the first card on full width, other cards in this view will not be rendered
     cards:
