@@ -20,3 +20,5 @@ devices:
     friendly_name: 20200223-osram-cla60-e27-rgbw-04
   '0x680ae2fffe314a4e':
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
+  '0x14b457fffe79b246':
+    friendly_name: 20200228-ikea-tradfri-e1743-remote-switch-01
