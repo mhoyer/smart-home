@@ -11,12 +11,12 @@ advanced:
   report: false
 devices:
   '0x7cb03eaa00ac909d':
-    friendly_name: '20200223-osram-cla60-e27-rgbw-01'
+    friendly_name: 20200223-osram-cla60-e27-rgbw-01
   '0x7cb03eaa00aa112a':
-    friendly_name: '20200223-osram-cla60-e27-rgbw-02'
+    friendly_name: 20200223-osram-cla60-e27-rgbw-02
   '0x7cb03eaa00adacd7':
-    friendly_name: '20200223-osram-cla60-e27-rgbw-03'
+    friendly_name: 20200223-osram-cla60-e27-rgbw-03
   '0x7cb03eaa00ada7f5':
-    friendly_name: '20200223-osram-cla60-e27-rgbw-04'
+    friendly_name: 20200223-osram-cla60-e27-rgbw-04
   '0x680ae2fffe314a4e':
-    friendly_name: '20200223-ikea-tradfri-e1810-remote-control-01'
+    friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
