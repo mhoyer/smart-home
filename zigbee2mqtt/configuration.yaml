@@ -23,4 +23,6 @@ devices:
   '0x14b457fffe79b246':
     friendly_name: 20200228-ikea-tradfri-e1743-remote-switch-01
   '0x14b457fffe67a19c':
-    friendly_name: 20200301-ikea-tradfri-led1836g9-e27 
+    friendly_name: 20200301-ikea-tradfri-led1836g9-e27
+  '0x086bd7fffe3fc805':
+    friendly_name: ikea-kitchen-30w-driver
