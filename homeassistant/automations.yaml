@@ -1,1 +1,25 @@
-[]
+- alias: Toggle living room
+  trigger:
+    platform: mqtt
+    topic: 'zigbee2mqtt/20200228-ikea-tradfri-e1743-remote-switch-01'
+  condition:
+    condition: template
+    value_template: '{{ "brightness_stop" == trigger.payload_json.click }}'
+  action:
+    entity_id: light.20200223_osram_cla60_e27_rgbw_02_light
+    service: light.toggle
+
+- alias: Toggle kitchen light     
+  trigger:
+    platform: mqtt
+    topic: 'zigbee2mqtt/20200223-ikea-tradfri-e1810-remote-control-01'
+  condition:
+    condition: template
+    value_template: '{{ "toggle" == trigger.payload_json.action }}'
+  action:
+    entity_id: light.ikea_kitchen_30w_driver_light
+    service: light.toggle
+
+# 20200223_osram_cla60_e27_rgbw_04_light
+
+

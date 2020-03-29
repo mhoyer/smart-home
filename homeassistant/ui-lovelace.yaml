@@ -18,6 +18,7 @@ views:
       - type: light
         entity: light.20200223_osram_cla60_e27_rgbw_03_light
       - type: light
+        name: DebugBulb
         entity: light.20200223_osram_cla60_e27_rgbw_04_light
       - type: entities
         entities:

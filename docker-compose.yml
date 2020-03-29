@@ -13,11 +13,10 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.11.0
+    image: koenkk/zigbee2mqtt:1.12.0
     restart: always
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
-#      - /dev/ttyUSB_cc2531:/dev/ttyACM0
     environment:
       TZ: "Europe/Berlin"
       # DEBUG: "*"
@@ -25,13 +24,27 @@ services:
       - ./zigbee2mqtt:/app/data
       - /run/udev:/run/udev:ro
 
-  homeassistant:
-    container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:0.105.4
+  zigbee2mqtt-assistant:
+    container_name: z2ma
+    image: carldebilly/zigbee2mqttassistant:0.3.154
     restart: always
     environment:
-      TZ: "Europe/Berlin"
-    volumes:
-      - ./homeassistant:/config
+      - Z2MA_SETTINGS__MQTTSERVER=mosquitto
+      #- Z2MA_SETTINGS__MQTTUSERNAME={MQTTUSERNAME}
+      #- Z2MA_SETTINGS__MQTTPASSWORD={MQTTPASSWORD}
+      # Set to your TimeZone when using on Linux https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      # Won't work if you're using the Windows version of the container
+      - TZ=Europe/Berlin
     ports:
-      - "8123:8123"
+      - "8880:80"
+
+#  homeassistant:
+#    container_name: homeassistant
+#    image: homeassistant/raspberrypi4-homeassistant:0.106.6
+#    restart: always
+#    environment:
+#      TZ: "Europe/Berlin"
+#    volumes:
+#      - ./homeassistant:/config
+#    ports:
+#      - "8123:8123"
