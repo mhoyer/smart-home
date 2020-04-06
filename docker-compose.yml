@@ -19,10 +19,20 @@ services:
       - "/dev/ttyAMA1:/dev/ttyAMA1"
     environment:
       TZ: "Europe/Berlin"
-      # DEBUG: "*"
+      # DEBUG: "z*"
     volumes:
       - "./zigbee2mqtt:/app/data"
       - "/run/udev:/run/udev:ro"
+
+  zigbee2mqtt-assistant:
+    container_name: z2ma
+    image: carldebilly/zigbee2mqttassistant:0.3.156
+    restart: always
+    environment:
+      - Z2MA_SETTINGS__MQTTSERVER=mosquitto
+      - TZ=Europe/Berlin
+    ports:
+      - "8124:80"
 
   homeassistant:
     container_name: homeassistant
