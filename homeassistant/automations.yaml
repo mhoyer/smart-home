@@ -1,1 +1,7 @@
-[]
+- alias: Toggle living room light
+  trigger:
+    platform: mqtt
+    topic: 'zigbee2mqtt/living_room_switch_main/click'
+  action:
+    entity_id: light.living_room_light_ceiling_light
+    service: light.toggle

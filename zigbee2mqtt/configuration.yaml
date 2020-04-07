@@ -1,4 +1,4 @@
-homeassistant: false
+homeassistant: true
 permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
@@ -25,3 +25,7 @@ devices:
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
   '0x14b457fffe79b246':
     friendly_name: 20200228-ikea-tradfri-e1743-remote-switch-01
+  '0x14b457fffe67a19c':
+    friendly_name: living_room_light_ceiling
+  '0xccccccfffe932c4c':
+    friendly_name: living_room_switch_main

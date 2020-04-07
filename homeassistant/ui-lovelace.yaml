@@ -12,32 +12,9 @@ views:
       - entity: sun.sun
     cards:
       - type: light
-        entity: light.20200223_osram_cla60_e27_rgbw_01_light
-      - type: light
-        entity: light.20200223_osram_cla60_e27_rgbw_02_light
-      - type: light
-        entity: light.20200223_osram_cla60_e27_rgbw_03_light
-      - type: light
-        entity: light.20200223_osram_cla60_e27_rgbw_04_light
-      - type: entities
-        entities:
-          - sensor.20200223_osram_cla60_e27_rgbw_01_linkquality
-      - type: entities
-        entities:
-          - sensor.20200223_osram_cla60_e27_rgbw_02_linkquality
-      - type: entities
-        entities:
-          - sensor.20200223_osram_cla60_e27_rgbw_03_linkquality
-      - type: entities
-        entities:
-          - sensor.20200223_osram_cla60_e27_rgbw_04_linkquality
-      - entity: weather.home
-        type: weather-forecast
-      - type: entities
-        entities:
-          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_action
-          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_battery
-          - sensor.20200223_ikea_tradfri_e1810_remote_control_01_linkquality
+        entity: light.living_room_light_ceiling_light
+      - type: weather-forecast
+        entity: weather.home
   - title: Zigbee Network
     panel: true # this renders the first card on full width, other cards in this view will not be rendered
     cards:
