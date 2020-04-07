@@ -22,3 +22,12 @@ mqtt:
   will_message:
     topic: 'hass/status'
     payload: 'offline'
+
+speedtestdotnet:
+  server_id: 11519
+  scan_interval:
+    minutes: 60
+  monitored_conditions:
+    - ping
+    - download
+    - upload

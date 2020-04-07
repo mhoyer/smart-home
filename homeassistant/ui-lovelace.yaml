@@ -15,6 +15,18 @@ views:
         entity: light.living_room_light_ceiling_light
       - type: weather-forecast
         entity: weather.home
+      - type: history-graph
+        title: 'Speedtest'
+        hours_to_show: 48
+        refresh_interval: 0
+        entities:
+          - entity: sensor.speedtest_download
+            name: Download
+          - entity: sensor.speedtest_upload
+            name: Upload
+      - type: entities
+        entities:
+          - sensor.speedtest_ping
   - title: Zigbee Network
     panel: true # this renders the first card on full width, other cards in this view will not be rendered
     cards:
