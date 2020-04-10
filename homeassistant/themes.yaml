@@ -1,0 +1,70 @@
+dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
+  # Background image
+  lovelace-background: 'center / cover no-repeat url("/local/background.jpg") fixed'
+
+  # Colors
+  text-color: 'hsl(220, 10%, 80%)'                                                # Grey text
+  text-medium-light-color: '#A0A2A8'                                              # Medium-light grey text
+  text-medium-color: '#80828A'                                                    # Medium grey text
+  text-dark-color: '#6A6B74'                                                      # Dark grey text
+  accent-color: '#008bef'                                                         # Blue
+  accent-medium-color: '#2686c1'                                                  # Decent blue
+  background-color: 'hsl(220, 10%, 6%)'                                           # Dark grey background
+  background-color-2: 'hsl(220, 10%, 14%)'                                        # Light grey background
+  background-card-color: 'hsla(220, 10%, 10%, 0.9)'                               # Grey background
+  border-color: 'hsl(220, 10%, 14%)'                                              # Grey border
+
+  # Header
+  app-header-background-color: 'hsla(220, 10%, 12%, 1)'                           # Background color
+  
+  # Text
+  primary-color: 'var(--text-color)'
+  text-primary-color: 'var(--text-color)'
+  
+  # Left Menu
+  paper-listbox-background-color: 'hsl(220, 10%, 9%)'                             # Background
+  sidebar-text-color: 'hsl(190, 40%, 50%)'                                        # Text
+  sidebar-icon-color: 'var(--sidebar-text-color)'                                 # Icons
+  sidebar-selected-text-color: 'hsl(190, 60%, 70%)'                               # Selected row label
+  sidebar-selected-icon-color: 'var(--sidebar-selected-text-color)'               # Selected row icon and background (15%)
+
+  # UI
+  paper-card-header-color: 'var(--text-color)'                                    # Title in settings
+  primary-background-color: 'var(--background-color)'                             # Background (also title background in left menu)
+  mdc-theme-primary: 'var(--accent-medium-color)'                                 # Action Buttons (save, restart etc.)
+  card-background-color: 'var(--background-card-color)'                           # Entity Registry Background
+  
+  # Dialogs
+  paper-dialog-background-color: 'hsl(220, 10%, 11%)'
+  
+  # Card
+  paper-card-background-color: 'var(--background-card-color)'                     # Background
+  dark-primary-color: 'var(--text-color)'
+  primary-text-color: 'var(--text-color)'
+  paper-listbox-color: 'var(--text-color)'
+  light-primary-color: 'var(--text-dark-color)'
+  secondary-text-color: 'var(--text-medium-color)'
+  disabled-text-color: 'var(--text-dark-color)'
+  paper-dialog-button-color: 'var(--text-color)'
+  secondary-background-color: 'var(--background-color-2)'                         # Background more info title
+
+  # Icons
+  paper-item-icon-color: 'var(--text-dark-color)'                                 # Off
+  paper-item-icon-active-color: 'var(--accent-color)'                             # On
+  iron-icon-fill-color: 'var(--text-dark-color)'
+
+  # Switches
+  switch-checked-button-color: 'var(--text-medium-light-color)'                   # Knob On
+  switch-unchecked-button-color: 'var(--text-medium-light-color)'                 # Knob Off
+  switch-checked-track-color: '#009FFF'                                           # Background On
+  switch-unchecked-track-color: '#767682'                                         # Background Off
+
+  # Slider
+  paper-slider-active-color: 'var(--accent-color)'                                # Line On
+  paper-slider-container-color: 'var(--text-dark-color)'                          # Line Off
+  paper-slider-knob-color: 'var(--text-medium-light-color)'                       # Knob On
+  paper-slider-knob-start-color: 'var(--text-medium-light-color)'                 # Knob Off
+  
+  # Shadows
+  ha-card-box-shadow: 'inset 0px 0px 0px 1px var(--border-color)'
+
