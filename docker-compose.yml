@@ -44,3 +44,17 @@ services:
       - ./homeassistant:/config
     ports:
       - "8123:8123"
+
+  appdaemon:
+    container_name: appdaemon
+    build: ./appdaemon/src
+    restart: always
+    environment:
+      HA_URL: "http://homeassistant:8123"
+      TOKEN: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2OTRhYWQzZTU5NzE0MDJiOTczNzhlYjgyNGMxNjA1YiIsImlhdCI6MTU4NjcyNzUzNCwiZXhwIjoxOTAyMDg3NTM0fQ.KAIkInbCeKXirW576nw2x3v1rVOpU7xabhcGH9UTtoQ"
+      DASH_URL: "http://r2d2:5050"
+      TZ: "Europe/Berlin"
+    volumes:
+      - "./appdaemon/conf:/conf"
+    ports:
+      - "5050:5050"
