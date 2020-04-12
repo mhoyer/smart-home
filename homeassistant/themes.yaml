@@ -22,18 +22,19 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
   text-primary-color: 'var(--text-color)'
   
   # Left Menu
-  paper-listbox-background-color: 'hsl(220, 10%, 9%)'                             # Background
   sidebar-text-color: 'hsl(190, 40%, 50%)'                                        # Text
   sidebar-icon-color: 'var(--sidebar-text-color)'                                 # Icons
   sidebar-selected-text-color: 'hsl(190, 60%, 70%)'                               # Selected row label
   sidebar-selected-icon-color: 'var(--sidebar-selected-text-color)'               # Selected row icon and background (15%)
+  sidebar-background-color: 'hsl(220, 10%, 9%)'
 
   # UI
   paper-card-header-color: 'var(--text-color)'                                    # Title in settings
   primary-background-color: 'var(--background-color)'                             # Background (also title background in left menu)
   mdc-theme-primary: 'var(--accent-medium-color)'                                 # Action Buttons (save, restart etc.)
   card-background-color: 'var(--background-card-color)'                           # Entity Registry Background
-  
+  label-badge-text-color: 'var(--text-color)'                                     # Status badge icon color
+
   # Dialogs
   paper-dialog-background-color: 'hsl(220, 10%, 11%)'
   
@@ -51,7 +52,6 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
   # Icons
   paper-item-icon-color: 'var(--text-dark-color)'                                 # Off
   paper-item-icon-active-color: 'var(--accent-color)'                             # On
-  iron-icon-fill-color: 'var(--text-dark-color)'
 
   # Switches
   switch-checked-button-color: 'var(--text-medium-light-color)'                   # Knob On
