@@ -1,12 +1,13 @@
 version: "3"
 services:
+
   mosquitto:
     container_name: mosquitto
     image: eclipse-mosquitto:1.6
     restart: always
     volumes:
-      - ./mosquitto/data:/mosquitto/data
-      - ./mosquitto/log:/mosquitto/log
+      - "./mosquitto/data:/mosquitto/data"
+      - "./mosquitto/log:/mosquitto/log"
     ports:
       - "1883:1883"
       - "9001:9001"
@@ -29,8 +30,8 @@ services:
     image: carldebilly/zigbee2mqttassistant:0.3.156
     restart: always
     environment:
-      - Z2MA_SETTINGS__MQTTSERVER=mosquitto
-      - TZ=Europe/Berlin
+      Z2MA_SETTINGS__MQTTSERVER: "mosquitto"
+      TZ: "Europe/Berlin"
     ports:
       - "8124:80"
 
@@ -41,7 +42,7 @@ services:
     environment:
       TZ: "Europe/Berlin"
     volumes:
-      - ./homeassistant:/config
+      - "./homeassistant:/config"
     ports:
       - "8123:8123"
 
