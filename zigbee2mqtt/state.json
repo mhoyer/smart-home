@@ -1,0 +1,27 @@
+{
+    "0xccccccfffe932c4c": {
+        "linkquality": 91,
+        "update_available": true,
+        "battery": 87
+    },
+    "0x14b457fffe67a19c": {
+        "update_available": false,
+        "state": "OFF",
+        "brightness": 127
+    },
+    "0x680ae2fffe1ae4e9": {
+        "linkquality": 65,
+        "update_available": false
+    },
+    "0xec1bbdfffede164f": {
+        "update_available": false,
+        "linkquality": 54,
+        "battery": 60
+    },
+    "0x680ae2fffe37b078": {
+        "update_available": false,
+        "position": 0,
+        "linkquality": 23,
+        "battery": 45
+    }
+}

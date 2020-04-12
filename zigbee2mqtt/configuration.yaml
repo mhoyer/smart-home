@@ -29,3 +29,9 @@ devices:
     friendly_name: living_room_light_ceiling
   '0xccccccfffe932c4c':
     friendly_name: living_room_switch_main
+  '0x680ae2fffe1ae4e9':
+    friendly_name: sleeping_room_repeater
+  '0xec1bbdfffede164f':
+    friendly_name: sleeping_room_blinds_control
+  '0x680ae2fffe37b078':
+    friendly_name: sleeping_room_blinds
