@@ -396,7 +396,7 @@
   "node-red-contrib-home-assistant-websocket": {
    "name": "node-red-contrib-home-assistant-websocket",
    "version": "0.22.2",
-   "local": false,
+   "local": true,
    "nodes": {
     "server": {
      "name": "server",
@@ -563,7 +563,8 @@
      "view-node-show-label": true,
      "view-show-tips": true
     }
-   }
+   },
+   "menu-menu-item-sidebar": true
   }
  }
 }

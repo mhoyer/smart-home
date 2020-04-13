@@ -64,9 +64,10 @@ services:
     container_name: nodered
     image: nodered/node-red:1.0.5
     restart: always
-    # user: "1000:1000"
-    ports:
-      - "1880:1880"
+    environment:
+      TZ: "Europe/Berlin"
     volumes:
       - "./nodered:/data"
       - "/etc/localtime:/etc/localtime:ro"
+    ports:
+      - "1880:1880"
