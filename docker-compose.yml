@@ -59,3 +59,14 @@ services:
       - "./appdaemon/conf:/conf"
     ports:
       - "5050:5050"
+
+  nodered:
+    container_name: nodered
+    image: nodered/node-red:1.0.5
+    restart: always
+    # user: "1000:1000"
+    ports:
+      - "1880:1880"
+    volumes:
+      - "./nodered:/data"
+      - "/etc/localtime:/etc/localtime:ro"
