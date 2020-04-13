@@ -392,6 +392,163 @@
      "file": "/usr/src/node-red/node_modules/node-red-node-tail/28-tail.js"
     }
    }
+  },
+  "node-red-contrib-home-assistant-websocket": {
+   "name": "node-red-contrib-home-assistant-websocket",
+   "version": "0.22.2",
+   "local": false,
+   "nodes": {
+    "server": {
+     "name": "server",
+     "types": [
+      "server"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/config-server/config-server.js"
+    },
+    "server-events": {
+     "name": "server-events",
+     "types": [
+      "server-events"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/events-all/events-all.js"
+    },
+    "server-state-changed": {
+     "name": "server-state-changed",
+     "types": [
+      "server-state-changed"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/events-state-changed/events-state-changed.js"
+    },
+    "trigger-state": {
+     "name": "trigger-state",
+     "types": [
+      "trigger-state"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/trigger-state/trigger-state.js"
+    },
+    "poll-state": {
+     "name": "poll-state",
+     "types": [
+      "poll-state"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/poll-state/poll-state.js"
+    },
+    "ha-webhook": {
+     "name": "ha-webhook",
+     "types": [
+      "ha-webhook"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/webhook/webhook.js"
+    },
+    "api-call-service": {
+     "name": "api-call-service",
+     "types": [
+      "api-call-service"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/call-service/call-service.js"
+    },
+    "ha-entity": {
+     "name": "ha-entity",
+     "types": [
+      "ha-entity"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/entity/entity.js"
+    },
+    "ha-fire-event": {
+     "name": "ha-fire-event",
+     "types": [
+      "ha-fire-event"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/fire-event/fire-event.js"
+    },
+    "api-current-state": {
+     "name": "api-current-state",
+     "types": [
+      "api-current-state"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/current-state/current-state.js"
+    },
+    "ha-get-entities": {
+     "name": "ha-get-entities",
+     "types": [
+      "ha-get-entities"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/get-entities/get-entities.js"
+    },
+    "api-get-history": {
+     "name": "api-get-history",
+     "types": [
+      "api-get-history"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/get-history/get-history.js"
+    },
+    "api-render-template": {
+     "name": "api-render-template",
+     "types": [
+      "api-render-template"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/render-template/render-template.js"
+    },
+    "ha-wait-until": {
+     "name": "ha-wait-until",
+     "types": [
+      "ha-wait-until"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/wait-until/wait-until.js"
+    },
+    "ha-api": {
+     "name": "ha-api",
+     "types": [
+      "ha-api"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-home-assistant-websocket",
+     "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/api/api.js"
+    }
+   }
   }
  },
  "_credentialSecret": "67c9fd17925802f7cec0c5ad24fe8ac3c889537f433cbd4e8d286d76579483b7",
@@ -401,7 +558,7 @@
     "view": {
      "view-show-grid": true,
      "view-snap-grid": true,
-     "view-grid-size": 20,
+     "view-grid-size": "20",
      "view-node-status": true,
      "view-node-show-label": true,
      "view-show-tips": true

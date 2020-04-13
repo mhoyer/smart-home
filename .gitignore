@@ -1,4 +1,7 @@
 *.log
+*.backup
+
+node_modules/
 
 homeassistant/.HA_VERSION
 homeassistant/.storage/
