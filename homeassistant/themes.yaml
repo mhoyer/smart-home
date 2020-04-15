@@ -16,12 +16,14 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
 
   # Header
   app-header-background-color: 'hsla(220, 10%, 12%, 1)'                           # Background color
-  
+
   # Text
   primary-color: 'var(--text-color)'
   text-primary-color: 'var(--text-color)'
-  
+  rgb-primary-color: 'var(--text-color)'
+
   # Left Menu
+  # paper-listbox-background-color: 'hsl(220, 10%, 9%)'                             # Background
   sidebar-text-color: 'hsl(190, 40%, 50%)'                                        # Text
   sidebar-icon-color: 'var(--sidebar-text-color)'                                 # Icons
   sidebar-selected-text-color: 'hsl(190, 60%, 70%)'                               # Selected row label
@@ -37,7 +39,7 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
 
   # Dialogs
   paper-dialog-background-color: 'hsl(220, 10%, 11%)'
-  
+
   # Card
   paper-card-background-color: 'var(--background-card-color)'                     # Background
   dark-primary-color: 'var(--text-color)'
@@ -64,7 +66,7 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
   paper-slider-container-color: 'var(--text-dark-color)'                          # Line Off
   paper-slider-knob-color: 'var(--text-medium-light-color)'                       # Knob On
   paper-slider-knob-start-color: 'var(--text-medium-light-color)'                 # Knob Off
-  
+
   # Shadows
   ha-card-box-shadow: 'inset 0px 0px 0px 1px var(--border-color)'
 
