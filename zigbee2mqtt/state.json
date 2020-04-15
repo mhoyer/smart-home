@@ -1,27 +1,87 @@
 {
     "0xccccccfffe932c4c": {
-        "linkquality": 26,
+        "linkquality": 46,
         "update_available": true,
         "battery": 87
     },
     "0x14b457fffe67a19c": {
         "update_available": false,
         "state": "OFF",
-        "brightness": 127
+        "brightness": 113
     },
     "0x680ae2fffe1ae4e9": {
-        "linkquality": 57,
+        "linkquality": 65,
         "update_available": false
     },
     "0xec1bbdfffede164f": {
         "update_available": false,
-        "linkquality": 78,
-        "battery": 21
+        "linkquality": 26,
+        "battery": 100
     },
     "0x680ae2fffe37b078": {
         "update_available": false,
         "position": 0,
-        "linkquality": 26,
-        "battery": 44
+        "linkquality": 54,
+        "battery": 50
+    },
+    "0xec1bbdfffe9cd801": {
+        "update_available": false,
+        "state": "OFF"
+    },
+    "0xec1bbdfffea2ff59": {
+        "update_available": false,
+        "state": "OFF"
+    },
+    "0xec1bbdfffe9ecc68": {
+        "update_available": false,
+        "state": "OFF"
+    },
+    "0xccccccfffe9251f1": {
+        "update_available": true,
+        "linkquality": 36,
+        "battery": 87
+    },
+    "0xccccccfffe924c55": {
+        "update_available": true,
+        "linkquality": 52,
+        "battery": 100
+    },
+    "0x00158d00041dffcf": {
+        "battery": 100,
+        "voltage": 3005,
+        "temperature": 21.65,
+        "humidity": 41.55,
+        "linkquality": 46
+    },
+    "0x00158d00041e543c": {
+        "battery": 100,
+        "voltage": 3005,
+        "temperature": 21.06,
+        "humidity": 36.63,
+        "linkquality": 15
+    },
+    "0x00158d00044f7d2b": {
+        "battery": 100,
+        "voltage": 3015,
+        "temperature": 19.98,
+        "humidity": 43.83,
+        "pressure": 1005.8,
+        "linkquality": 80
+    },
+    "0x00158d0004210e5d": {
+        "battery": 100,
+        "voltage": 3015,
+        "temperature": 21.85,
+        "humidity": 40.29,
+        "pressure": 1005.7,
+        "linkquality": 28
+    },
+    "0x00158d00047d4108": {
+        "battery": 100,
+        "voltage": 3015,
+        "illuminance": 0,
+        "illuminance_lux": 0,
+        "linkquality": 62,
+        "occupancy": false
     }
 }
