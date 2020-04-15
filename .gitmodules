@@ -1,3 +1,0 @@
-[submodule "appdaemon/src"]
-	path = appdaemon/src
-	url = https://github.com/home-assistant/appdaemon.git
