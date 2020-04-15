@@ -549,6 +549,71 @@
      "file": "/data/node_modules/node-red-contrib-home-assistant-websocket/nodes/api/api.js"
     }
    }
+  },
+  "node-red-contrib-zigbee2mqtt": {
+   "name": "node-red-contrib-zigbee2mqtt",
+   "version": "0.3.1",
+   "local": true,
+   "nodes": {
+    "in": {
+     "name": "in",
+     "types": [
+      "zigbee2mqtt-in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/nodes/in.js"
+    },
+    "get": {
+     "name": "get",
+     "types": [
+      "zigbee2mqtt-get"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/nodes/get.js"
+    },
+    "out": {
+     "name": "out",
+     "types": [
+      "zigbee2mqtt-out"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/nodes/out.js"
+    },
+    "bridge": {
+     "name": "bridge",
+     "types": [
+      "zigbee2mqtt-bridge"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/nodes/bridge.js"
+    },
+    "server": {
+     "name": "server",
+     "types": [
+      "zigbee2mqtt-server"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/nodes/server.js"
+    },
+    "api": {
+     "name": "api",
+     "types": [],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-zigbee2mqtt",
+     "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/api.js"
+    }
+   }
   }
  },
  "_credentialSecret": "67c9fd17925802f7cec0c5ad24fe8ac3c889537f433cbd4e8d286d76579483b7",
@@ -561,7 +626,7 @@
      "view-grid-size": "20",
      "view-node-status": true,
      "view-node-show-label": true,
-     "view-show-tips": true
+     "view-show-tips": false
     }
    },
    "menu-menu-item-sidebar": true
