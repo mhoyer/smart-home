@@ -32,7 +32,7 @@ devices:
   '0x680ae2fffe1ae4e9':
     friendly_name: sleep_repeater
   '0xec1bbdfffede164f':
-    friendly_name: sleep_blinds_ctrl
+    friendly_name: sleep_blinds_ctrl_01
   '0x680ae2fffe37b078':
     friendly_name: sleep_blinds
   '0xec1bbdfffe9cd801':
@@ -58,3 +58,6 @@ devices:
     friendly_name: bath_env
   '0x00158d00047d4108':
     friendly_name: bath_motion
+  '0x000d6ffffea94dd0':
+    friendly_name: sleep_blinds_ctrl_02
+    retain: true

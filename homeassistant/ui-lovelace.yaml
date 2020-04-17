@@ -42,6 +42,21 @@ views:
           entities:
             - entity: cover.sleep_blinds_cover
               name: Schlafzimmerrollo
+        - type: custom:mini-graph-card
+          height: 100
+          line_width: 2
+          font_size: 60
+          entities:
+            - entity: sensor.sleep_blinds_ctrl_01_battery
+              name: Blinds Ctrl 01
+            - entity: sensor.sleep_blinds_ctrl_02_battery
+              name: Blinds Ctrl 02
+            - entity: sensor.hall_switch_01_battery
+              name: Hall Switch 01
+            - entity: sensor.hall_switch_02_battery
+              name: Hall Switch 02
+            - entity: sensor.living_switch_battery
+              name: Living Switch
 
       - type: vertical-stack
         cards:
