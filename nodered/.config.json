@@ -614,6 +614,23 @@
      "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/api.js"
     }
    }
+  },
+  "node-red-contrib-bigtimer": {
+   "name": "node-red-contrib-bigtimer",
+   "version": "2.3.1",
+   "local": true,
+   "nodes": {
+    "bigtimer": {
+     "name": "bigtimer",
+     "types": [
+      "bigtimer"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-bigtimer",
+     "file": "/data/node_modules/node-red-contrib-bigtimer/bigtimer.js"
+    }
+   }
   }
  },
  "_credentialSecret": "67c9fd17925802f7cec0c5ad24fe8ac3c889537f433cbd4e8d286d76579483b7",
