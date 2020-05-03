@@ -18,7 +18,7 @@ dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
   app-header-background-color: 'hsla(220, 10%, 12%, 1)'                           # Background color
 
   # Text
-  primary-color: 'var(--text-color)'
+  primary-color: 'var(--background-color)'
   text-primary-color: 'var(--text-color)'
   rgb-primary-color: 'var(--text-color)'
 
