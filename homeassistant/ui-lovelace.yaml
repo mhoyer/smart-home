@@ -39,9 +39,18 @@ views:
             - entity: light.living_light_ceiling_light
               name: Decke
         - type: entities
+          title: Kueche
           entities:
-            - entity: cover.sleep_blinds_cover
-              name: Schlafzimmerrollo
+            - entity: light.kitchen_light_light
+              name: Decke
+            - entity: light.kitchen_ball_light_light
+              name: Ball
+        - type: entities
+          entities:
+            - entity: cover.sleep_blinds_left_cover
+              name: Schlafzimmerrollo (links)
+            - entity: cover.sleep_blinds_right_cover
+              name: Schlafzimmerrollo (rechts)
         - type: custom:mini-graph-card
           height: 100
           line_width: 2
