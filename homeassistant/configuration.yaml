@@ -26,9 +26,9 @@ mqtt:
     payload: 'offline'
 
 speedtestdotnet:
-  server_id: 11519
+  # server_id: 11519 # see: http://www.speedtestserver.com/
   scan_interval:
-    minutes: 60
+    minutes: 360
   monitored_conditions:
     - ping
     - download
