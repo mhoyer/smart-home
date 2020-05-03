@@ -13,28 +13,39 @@ advanced:
   rtscts: false
   report: false
 devices:
-  '0x7cb03eaa00ac909d':
-    friendly_name: 20200223-osram-cla60-e27-rgbw-01
   '0x7cb03eaa00aa112a':
-    friendly_name: 20200223-osram-cla60-e27-rgbw-02
+    friendly_name: kitchen_ball_light
+    retain: true
   '0x7cb03eaa00adacd7':
-    friendly_name: 20200223-osram-cla60-e27-rgbw-03
-  '0x7cb03eaa00ada7f5':
-    friendly_name: 20200223-osram-cla60-e27-rgbw-04
-  '0x680ae2fffe314a4e':
-    friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
+    friendly_name: kitchen_light
+    retain: true
   '0x14b457fffe79b246':
-    friendly_name: 20200228-ikea-tradfri-e1743-remote-switch-01
+    friendly_name: kitchen_switch
+    retain: true
+  '0x00158d00041dffcf':
+    friendly_name: kitchen_env
   '0x14b457fffe67a19c':
     friendly_name: living_light_ceiling
   '0xccccccfffe932c4c':
     friendly_name: living_switch
+  '0x7cb03eaa00ac909d':
+    friendly_name: sleep_light
+    retain: true
   '0x680ae2fffe1ae4e9':
     friendly_name: sleep_repeater
   '0xec1bbdfffede164f':
     friendly_name: sleep_blinds_ctrl_01
+  '0x000d6ffffea94dd0':
+    friendly_name: sleep_blinds_ctrl_02
+    retain: true
+  '0xd0cf5efffeea14b4':
+    friendly_name: sleep_blinds_right
+    retain: true
   '0x680ae2fffe37b078':
-    friendly_name: sleep_blinds
+    friendly_name: sleep_blinds_left
+  '0xccccccfffea2fddd':
+    friendly_name: sleep_switch
+    retain: true
   '0xec1bbdfffe9cd801':
     friendly_name: hall_light_02
     retain: true
@@ -48,8 +59,6 @@ devices:
     friendly_name: hall_switch_01
   '0xccccccfffe924c55':
     friendly_name: hall_switch_02
-  '0x00158d00041dffcf':
-    friendly_name: kitchen_env
   '0x00158d00041e543c':
     friendly_name: work_env
   '0x00158d00044f7d2b':
@@ -58,6 +67,7 @@ devices:
     friendly_name: bath_env
   '0x00158d00047d4108':
     friendly_name: bath_motion
-  '0x000d6ffffea94dd0':
-    friendly_name: sleep_blinds_ctrl_02
-    retain: true
+  '0x7cb03eaa00ada7f5':
+    friendly_name: 20200223-osram-cla60-e27-rgbw-04
+  '0x680ae2fffe314a4e':
+    friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
