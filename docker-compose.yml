@@ -14,7 +14,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.13.0
+    image: koenkk/zigbee2mqtt:1.13.1
     restart: always
     devices:
       - "/dev/ttyAMA1:/dev/ttyAMA1"
@@ -27,7 +27,7 @@ services:
 
   zigbee2mqtt-assistant:
     container_name: z2ma
-    image: carldebilly/zigbee2mqttassistant:0.3.164
+    image: carldebilly/zigbee2mqttassistant:0.3.170
     restart: always
     environment:
       Z2MA_SETTINGS__MQTTSERVER: "mosquitto"
@@ -37,7 +37,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:0.109.3
+    image: homeassistant/raspberrypi4-homeassistant:0.110.5
     restart: always
     environment:
       TZ: "Europe/Berlin"
@@ -48,7 +48,7 @@ services:
 
   nodered:
     container_name: nodered
-    image: nodered/node-red:1.0.6
+    image: nodered/node-red:1.0.6-2
     restart: always
     environment:
       TZ: "Europe/Berlin"
