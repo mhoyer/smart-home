@@ -26,6 +26,9 @@ devices:
     friendly_name: kitchen_env
   '0x14b457fffe67a19c':
     friendly_name: living_light_ceiling
+  '0x00158d0004724e85':
+    friendly_name: living_light_floor
+    retain: true
   '0xccccccfffe932c4c':
     friendly_name: living_switch
   '0x7cb03eaa00ac909d':
@@ -63,6 +66,9 @@ devices:
     friendly_name: work_env
   '0x00158d00044f7d2b':
     friendly_name: sleep_env
+  '0xccccccfffe708788':
+    friendly_name: bath_switch
+    retain: true
   '0x00158d0004210e5d':
     friendly_name: bath_env
   '0x00158d00047d4108':

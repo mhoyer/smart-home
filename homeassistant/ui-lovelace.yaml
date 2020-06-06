@@ -38,23 +38,47 @@ views:
           entities:
             - entity: light.living_light_ceiling_light
               name: Decke
+            - entity: light.living_light_floor_light
+              name: Boden
         - type: entities
-          title: Kueche
+          title: Küche
           entities:
             - entity: light.kitchen_light_light
               name: Decke
             - entity: light.kitchen_ball_light_light
               name: Ball
+            - type: divider
+            - entity: sensor.kitchen_env_temperature
+              name: Temperatur
+            - entity: sensor.kitchen_env_humidity
+              name: Luftfeuchtigkeit
         - type: entities
+          title: Schlafzimmer
           entities:
+            - entity: light.sleep_light_light
+              name: Decke
             - entity: cover.sleep_blinds_left_cover
               name: Schlafzimmerrollo (links)
             - entity: cover.sleep_blinds_right_cover
               name: Schlafzimmerrollo (rechts)
+            - type: divider
+            - entity: sensor.sleep_env_temperature
+              name: Temperatur
+            - entity: sensor.sleep_env_humidity
+              name: Luftfeuchtigkeit
+            - entity: sensor.sleep_env_pressure
+              name: Luftdruck
+            - entity: sensor.sleep_blinds_left_battery 
+              name: Schlafzimmerrollo (links)
+            - entity: sensor.sleep_blinds_right_battery 
+              name: Schlafzimmerrollo (rechts)
+
         - type: custom:mini-graph-card
-          height: 100
-          line_width: 2
+          height: 60
           font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
           entities:
             - entity: sensor.sleep_blinds_ctrl_01_battery
               name: Blinds Ctrl 01
