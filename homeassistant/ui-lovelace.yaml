@@ -23,8 +23,8 @@ views:
     cards:
       - type: vertical-stack
         cards:
-        - type: entities
-          title: Flur
+        - title: Flur
+          type: entities
           show_header_toggle: true
           entities:
             - entity: light.hall_light_01_light
@@ -33,15 +33,15 @@ views:
               name: Mitte
             - entity: light.hall_light_03_light
               name: Hinten
-        - type: entities
-          title: Wohnzimmer
+        - title: Wohnzimmer
+          type: entities
           entities:
             - entity: light.living_light_ceiling_light
               name: Decke
             - entity: light.living_light_floor_light
               name: Boden
-        - type: entities
-          title: Küche
+        - title: Küche
+          type: entities
           entities:
             - entity: light.kitchen_light_light
               name: Decke
@@ -52,8 +52,8 @@ views:
               name: Temperatur
             - entity: sensor.kitchen_env_humidity
               name: Luftfeuchtigkeit
-        - type: entities
-          title: Schlafzimmer
+        - title: Schlafzimmer
+          type: entities
           entities:
             - entity: light.sleep_light_light
               name: Decke
@@ -72,6 +72,30 @@ views:
               name: Schlafzimmerrollo (links)
             - entity: sensor.sleep_blinds_right_battery 
               name: Schlafzimmerrollo (rechts)
+        - title: Bad
+          type: entities
+          entities:
+            - entity: light.bath_mirror_light_light
+              name: Spiegel
+            - entity: light.bath_light_01_light
+              name: Dusche
+            - entity: light.bath_light_02_light
+              name: Eingang
+            - entity: light.bath_light_03_light
+              name: Waschbecken
+            - entity: light.bath_light_04_light
+              name: Wanne
+            - type: divider
+            - entity: sensor.bath_env_temperature
+              name: Temperatur
+            - entity: sensor.bath_env_humidity
+              name: Luftfeuchtigkeit
+            - entity: sensor.bath_env_pressure
+              name: Luftdruck
+            - entity: sensor.bath_motion_illuminance
+              name: Helligkeit
+            - entity: binary_sensor.bath_motion_occupancy
+              name: Besetzt?
 
         - type: custom:mini-graph-card
           height: 60

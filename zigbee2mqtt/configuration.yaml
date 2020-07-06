@@ -49,6 +49,8 @@ devices:
   '0xccccccfffea2fddd':
     friendly_name: sleep_switch
     retain: true
+  '0x00158d00044f7d2b':
+    friendly_name: sleep_env
   '0xec1bbdfffe9cd801':
     friendly_name: hall_light_02
     retain: true
@@ -62,10 +64,6 @@ devices:
     friendly_name: hall_switch_01
   '0xccccccfffe924c55':
     friendly_name: hall_switch_02
-  '0x00158d00041e543c':
-    friendly_name: work_env
-  '0x00158d00044f7d2b':
-    friendly_name: sleep_env
   '0xccccccfffe708788':
     friendly_name: bath_switch
     retain: true
@@ -74,6 +72,24 @@ devices:
   '0x00158d00047d4108':
     friendly_name: bath_motion
   '0x7cb03eaa00ada7f5':
-    friendly_name: 20200223-osram-cla60-e27-rgbw-04
+    friendly_name: bath_mirror_light
+    retain: true
+  '0xec1bbdfffe474333':
+    friendly_name: bath_light_01
+    retain: true
+  '0xccccccfffee07b63':
+    friendly_name: bath_light_02
+    retain: true
+  '0xec1bbdfffe4354b1':
+    friendly_name: bath_light_03
+    retain: true
+  '0x14b457fffe5bbcb3':
+    friendly_name: bath_light_04
+    retain: true
+  '0x00158d00041e543c':
+    friendly_name: work_env
   '0x680ae2fffe314a4e':
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
+  '0x00158d000521e62c':
+    friendly_name: hall_door_sensor
+    retain: true
