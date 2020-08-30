@@ -136,17 +136,26 @@ uart0   14  15              8   10
 uart1   14  15              8   10
 uart2   0   1   2   3       27  28  (I2C)
 uart3   4   5   6   7       7   29
-uart4   8   9   10  11      24  23  (SPI0)
+uart4   8   9   10  11      24  21  (SPI0)
 uart5   12  13  14  15      32  33  (gpio-fan)
 ```
 
-Which results in this connection schema for `uart2`:
+Due to the attached HifiBerry Digi Pro hat, we have to use `uart4` to not collide with used pins of the hat:
+
+> **HiFiBerry Digi and Amp**
+>
+> GPIO2-3 are used by our products for configuration. If you are experienced with I2C, you might add other slave devices. If you a a novice, we don’t recommend this at all.
+> GPIOs 28-31 are used for the sound interface. You can’t use them for any other purpose.
+
+Source: [https://www.hifiberry.com/docs/hardware/gpio-usage-of-hifiberry-boards/](https://www.hifiberry.com/docs/hardware/gpio-usage-of-hifiberry-boards/)
+
+Which results in this connection schema for `uart4`:
 
 PI4              | CC2350+CC2591
 --               | --
 Pin `39` or `06` | `GND`
-Pin `27` (TX)    | `RX` (P0_2)
-Pin `28` (RX)    | `TX` (P0_3)
+Pin `24` (TX)    | `RX` (P0_2)
+Pin `21` (RX)    | `TX` (P0_3)
 Pin `01`         | `VCC` (3.3v)
 
 For [zigbee2mqtt](https://www.zigbee2mqtt.io/) we have to add this connection settings to the `configuration.yml`:
