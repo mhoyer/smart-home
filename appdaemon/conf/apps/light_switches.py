@@ -9,10 +9,16 @@ class LightSwitches(hass.Hass):
   def toggle_bath(self, entity, attribute, old, new, kwargs):
     self.log(f'{entity}: {new}')
     if new == "off":
-      self.toggle("light.bath_light_01_light")
-      self.toggle("light.bath_light_02_light")
-      self.toggle("light.bath_light_03_light")
-      self.toggle("light.bath_light_04_light")
+      if self.get_state("light.bath_light_01_light") == "off":
+        self.turn_on("light.bath_light_01_light")
+        self.turn_on("light.bath_light_02_light")
+        self.turn_on("light.bath_light_03_light")
+        self.turn_on("light.bath_light_04_light")
+      else:
+        self.turn_off("light.bath_light_01_light")
+        self.turn_off("light.bath_light_02_light")
+        self.turn_off("light.bath_light_03_light")
+        self.turn_off("light.bath_light_04_light")
     if new == "on":
       self.toggle("light.bath_mirror_light_light")
 
