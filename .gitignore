@@ -1,5 +1,7 @@
 *.log
 *.backup
+.env
+__pycache__/
 
 node_modules/
 

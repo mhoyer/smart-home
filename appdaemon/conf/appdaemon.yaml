@@ -1,0 +1,16 @@
+appdaemon:
+  latitude: 51.32036
+  longitude: 12.34161
+  elevation: 130
+  plugins:
+    HASS:
+      type: hass
+      ha_url: !env_var HASS_URL
+      token: !env_var HASS_TOKEN
+  time_zone: !env_var TZ
+
+http:
+  url: http://localhost:5050
+admin:
+api:
+hadashboard:

@@ -1,0 +1,3 @@
+light_switches:
+  module: light_switches
+  class: LightSwitches
