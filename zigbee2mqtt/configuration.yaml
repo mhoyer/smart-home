@@ -14,7 +14,7 @@ advanced:
   report: false
 devices:
   '0x7cb03eaa00aa112a':
-    friendly_name: kitchen_ball_light
+    friendly_name: living_ball_light
     retain: true
   '0x7cb03eaa00adacd7':
     friendly_name: kitchen_light
@@ -27,7 +27,7 @@ devices:
   '0x14b457fffe67a19c':
     friendly_name: living_light_ceiling
   '0x00158d0004724e85':
-    friendly_name: living_light_floor
+    friendly_name: kitchen_light_corner
     retain: true
   '0xccccccfffe932c4c':
     friendly_name: living_switch

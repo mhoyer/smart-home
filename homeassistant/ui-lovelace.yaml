@@ -38,15 +38,15 @@ views:
           entities:
             - entity: light.living_light_ceiling_light
               name: Decke
-            - entity: light.living_light_floor_light
-              name: Boden
+            - entity: light.living_ball_light_light
+              name: Ball
         - title: Küche
           type: entities
           entities:
             - entity: light.kitchen_light_light
               name: Decke
-            - entity: light.kitchen_ball_light_light
-              name: Ball
+            - entity: light.kitchen_light_corner_light
+              name: Eckschrank
             - type: divider
             - entity: sensor.kitchen_env_temperature
               name: Temperatur
