@@ -1,3 +1,11 @@
 light_switches:
   module: light_switches
   class: LightSwitches
+
+hall:
+  module: hall_automation
+  class: HallAutomation
+
+sleep:
+  module: sleep_automation
+  class: SleepAutomation
