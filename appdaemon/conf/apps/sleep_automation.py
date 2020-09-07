@@ -3,7 +3,6 @@ import appdaemon.plugins.hass.hassapi as hass
 class SleepAutomation(hass.Hass):
 
   def initialize(self):
-    # self.log(self.entities.cover.sleep_blinds_left_cover.state)
     self.listen_state(self.open_close_blinds, "sensor.sleep_blinds_ctrl_01_action", attribute="action")
     self.listen_state(self.open_close_blinds, "sensor.sleep_blinds_ctrl_02_action", attribute="action")
 
@@ -15,3 +14,7 @@ class SleepAutomation(hass.Hass):
     if new == "close":
       self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left_cover")
       self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right_cover")
+
+  def open_blinds(self, kwargs):
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left_cover")
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right_cover")

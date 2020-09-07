@@ -2,19 +2,22 @@ import appdaemon.plugins.hass.hassapi as hass
 
 class HallAutomation(hass.Hass):
 
+  lights = [
+    "light.hall_light_01_light",
+    "light.hall_light_02_light",
+    "light.hall_light_03_light"
+  ]
+
   def initialize(self):
-    self.listen_state(self.on_main_door_contact, "binary_sensor.hall_door_sensor_contact", attribute="contact")
+    self.listen_state(self.on_light_switch_press, "sensor.hall_switch_01_action", attribute="action")
+    self.listen_state(self.on_light_switch_press, "sensor.hall_switch_02_action", attribute="action")
+
+  def on_light_switch_press(self, entity, attribute, old, new, kwargs):
+    if new != "on": return
+
+    action = self.turn_off if self.get_state(self.lights[0]) == "on" else self.turn_on
+    list(map(action, self.lights))
 
   def on_main_door_contact(self, entity, attribute, old, new, kwargs):
-    # if new != "true": return
-
-    self.log(f'"{entity}" fired [action="{new}"]')
-    # turn_fn = self.turn_on
-
-    # if self.get_state(lights[0]) == "on":
-    # turn_fn = self.turn_off
-
-    # for light in lights:
-    # self.log(f'  {turn_fn.__name__}: {light}')
-
-    # turn_fn(light)
+    action = self.turn_off if new else self.turn_on
+    list(map(action, self.lights))

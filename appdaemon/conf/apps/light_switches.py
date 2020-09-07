@@ -38,15 +38,6 @@ class LightSwitches(hass.Hass):
       action="off",
       lights=["light.kitchen_light_corner_light"]
     )
-    self.wire_up_toggle(
-      switches=["sensor.hall_switch_01_action", "sensor.hall_switch_02_action"],
-      action="on",
-      lights=[
-        "light.hall_light_01_light",
-        "light.hall_light_02_light",
-        "light.hall_light_03_light"
-      ]
-    )
 
   def wire_up_toggle(self, switches, action, lights):
     def toggle(entity, attribute, old, new, kwargs):
