@@ -93,3 +93,5 @@ devices:
   '0x00158d000521e62c':
     friendly_name: hall_door_sensor
     retain: true
+  '0x00158d000490fe24':
+    friendly_name: sleep_balcony_door_sensor
