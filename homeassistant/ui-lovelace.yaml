@@ -6,7 +6,7 @@ resources:
     url: /local/zigbee2mqtt-networkmap.js?v=0.6.0
     # see: https://github.com/azuwis/zigbee2mqtt-networkmap
   - type: module
-    url: /local/custom-header.js?v=1.7.0
+    url: /local/custom-header.js?v=1.7.6
     # see: https://github.com/maykar/custom-header
   - type: module
     url: /local/mini-graph-card-bundle.js?v=0.9.4

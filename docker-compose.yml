@@ -14,7 +14,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.14.3
+    image: koenkk/zigbee2mqtt:1.14.4
     restart: always
     devices:
       - "/dev/ttyAMA1:/dev/ttyAMA1"
