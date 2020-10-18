@@ -5,7 +5,7 @@ class SleepAutomation(hass.Hass):
   def initialize(self):
     self.listen_state(self.open_close_blinds, "sensor.sleep_blinds_ctrl_01_action", attribute="action")
     self.listen_state(self.open_close_blinds, "sensor.sleep_blinds_ctrl_02_action", attribute="action")
-    self.run_at_sunrise(self.open_blinds, offset=0)
+    self.run_at_sunrise(self.open_blinds, offset=-1800)
 
   def open_close_blinds(self, entity, attribute, old, new, kwargs):
     self.log(f'"{entity}" fired [action="{new}"]')
