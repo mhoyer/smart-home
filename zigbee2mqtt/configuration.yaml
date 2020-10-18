@@ -51,6 +51,13 @@ devices:
     retain: true
   '0x00158d00044f7d2b':
     friendly_name: sleep_env
+  '0x00158d000490fe24':
+    friendly_name: sleep_balcony_door_sensor
+  '0x842e14fffef154f3':
+    friendly_name: sleep_thermostat
+  '0x00158d000521e62c':
+    friendly_name: hall_door_sensor
+    retain: true
   '0xec1bbdfffe9cd801':
     friendly_name: hall_light_02
     retain: true
@@ -90,8 +97,5 @@ devices:
     friendly_name: work_env
   '0x680ae2fffe314a4e':
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
-  '0x00158d000521e62c':
-    friendly_name: hall_door_sensor
-    retain: true
-  '0x00158d000490fe24':
-    friendly_name: sleep_balcony_door_sensor
+  '0xccccccfffeb49bf7':
+    friendly_name: '0xccccccfffeb49bf7'
