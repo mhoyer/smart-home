@@ -38,6 +38,8 @@ views:
           entities:
             - entity: light.living_light_ceiling_light
               name: Decke
+            - entity: light.living_basket_light_light
+              name: Korblampe
             - entity: light.living_ball_light_light
               name: Ball
         - title: Küche
@@ -62,6 +64,8 @@ views:
             - entity: cover.sleep_blinds_right_cover
               name: Schlafzimmerrollo (rechts)
             - type: divider
+            - entity: climate.sleep_thermostat_climate
+              name: Thermostat
             - entity: sensor.sleep_env_temperature
               name: Temperatur
             - entity: sensor.sleep_env_humidity

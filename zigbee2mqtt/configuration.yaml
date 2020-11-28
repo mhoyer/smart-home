@@ -13,9 +13,6 @@ advanced:
   rtscts: false
   report: false
 devices:
-  '0x7cb03eaa00aa112a':
-    friendly_name: living_ball_light
-    retain: true
   '0x7cb03eaa00adacd7':
     friendly_name: kitchen_light
     retain: true
@@ -24,13 +21,18 @@ devices:
     retain: true
   '0x00158d00041dffcf':
     friendly_name: kitchen_env
-  '0x14b457fffe67a19c':
-    friendly_name: living_light_ceiling
   '0x00158d0004724e85':
     friendly_name: kitchen_light_corner
     retain: true
   '0xccccccfffe932c4c':
     friendly_name: living_switch
+  '0x7cb03eaa00aa112a':
+    friendly_name: living_basket_light
+    retain: true
+  '0x00158d0004724ead':
+    friendly_name: living_ball_light
+  '0x14b457fffe67a19c':
+    friendly_name: living_light_ceiling
   '0x7cb03eaa00ac909d':
     friendly_name: sleep_light
     retain: true
@@ -99,3 +101,4 @@ devices:
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
+
