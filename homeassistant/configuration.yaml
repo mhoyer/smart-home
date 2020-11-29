@@ -33,7 +33,7 @@ speedtestdotnet:
     - upload
 
 influxdb:
-  host: r2d2
+  host: r2d2.fritz.box
   port: 8086
   database: homeassistant
   # max_retries: 3
