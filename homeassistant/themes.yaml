@@ -1,6 +1,7 @@
 dark: # based on https://community.home-assistant.io/t/clear-theme-dark/100960
   # Background image
   lovelace-background: 'center / cover no-repeat url("/local/background.jpg") fixed'
+  header-height: '30px'
 
   # Colors
   text-color: 'hsl(220, 10%, 80%)'                                                # Grey text

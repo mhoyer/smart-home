@@ -98,6 +98,12 @@ views:
             - entity: binary_sensor.bath_motion_occupancy
               name: Besetzt?
 
+        - title: Arbeitszimmer
+          type: entities
+          entities:
+            - entity: sensor.work_env_temperature
+              name: Temperatur
+
         - type: custom:mini-graph-card
           height: 60
           font_size: 60
