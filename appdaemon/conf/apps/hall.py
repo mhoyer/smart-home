@@ -3,9 +3,9 @@ import appdaemon.plugins.hass.hassapi as hass
 class HallAutomation(hass.Hass):
 
   lights = [
-    "light.hall_light_01_light",
-    "light.hall_light_02_light",
-    "light.hall_light_03_light"
+    "light.hall_light_01",
+    "light.hall_light_02",
+    "light.hall_light_03"
   ]
 
   def initialize(self):

@@ -3,7 +3,7 @@ light_switches:
   class: LightSwitches
 
 hall:
-  module: hall_automation
+  module: hall
   class: HallAutomation
 
 bath_room:
