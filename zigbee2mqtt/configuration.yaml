@@ -33,6 +33,8 @@ devices:
     friendly_name: living_ball_light
   '0x14b457fffe67a19c':
     friendly_name: living_light_ceiling
+  '0x842e14fffe366622':
+    friendly_name: living_power_switch_fairy_lights
   '0x7cb03eaa00ac909d':
     friendly_name: sleep_light
     retain: true
@@ -101,4 +103,5 @@ devices:
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
-
+  '0x842e14fffe366660':
+    friendly_name: power_switch_01
