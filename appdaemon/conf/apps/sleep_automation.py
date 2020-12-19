@@ -10,12 +10,12 @@ class SleepAutomation(hass.Hass):
   def open_close_blinds(self, entity, attribute, old, new, kwargs):
     self.log(f'"{entity}" fired [action="{new}"]')
     if new == "close":
-      self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left_cover")
-      self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right_cover")
+      self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
+      self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
     if new == "open":
-      self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left_cover")
-      self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right_cover")
+      self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
+      self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
 
   def open_blinds(self, kwargs):
-    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left_cover")
-    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right_cover")
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
