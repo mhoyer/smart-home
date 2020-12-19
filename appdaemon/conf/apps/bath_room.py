@@ -12,9 +12,9 @@ class BathRoomAutomation(hass.Hass):
   ambient_lights = ["light.bath_mirror_light"]
 
   def initialize(self):
-    self.listen_state(self.on_ceil_light_switch_press, "sensor.bath_switch_action", attribute="action")
+    self.listen_state(self.on_light_switch_press, "sensor.bath_switch_action", attribute="action")
 
-  def on_ceil_light_switch_press(self, entity, attribute, old, new, kwargs):
+  def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     if new == "off":
       action = self.turn_on
       if self.get_state(self.ceil_lights[0]) == "on":
