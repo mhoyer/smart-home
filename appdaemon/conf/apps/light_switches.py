@@ -4,21 +4,6 @@ class LightSwitches(hass.Hass):
 
   def initialize(self):
     self.wire_up_toggle(
-      switches=["sensor.bath_switch_action"],
-      action="on",
-      lights=["light.bath_mirror_light_light"]
-    )
-    self.wire_up_toggle(
-      switches=["sensor.bath_switch_action"],
-      action="off",
-      lights=[
-        "light.bath_light_01_light",
-        "light.bath_light_02_light",
-        "light.bath_light_03_light",
-        "light.bath_light_04_light"
-      ]
-    )
-    self.wire_up_toggle(
       switches=["sensor.sleep_switch_action"],
       action="on",
       lights=["light.sleep_light_light"]
