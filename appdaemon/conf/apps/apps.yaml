@@ -6,6 +6,10 @@ hall:
   module: hall_automation
   class: HallAutomation
 
+living_room:
+  module: living_room
+  class: LivingRoomAutomation
+
 sleep:
   module: sleep_automation
   class: SleepAutomation

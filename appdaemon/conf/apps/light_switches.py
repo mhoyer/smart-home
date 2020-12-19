@@ -19,11 +19,6 @@ class LightSwitches(hass.Hass):
       ]
     )
     self.wire_up_toggle(
-      switches=["sensor.living_switch_action"],
-      action="on",
-      lights=["light.living_light_ceiling_light"]
-    )
-    self.wire_up_toggle(
       switches=["sensor.sleep_switch_action"],
       action="on",
       lights=["light.sleep_light_light"]
