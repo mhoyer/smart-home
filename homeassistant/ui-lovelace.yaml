@@ -13,27 +13,27 @@ views:
           type: entities
           show_header_toggle: true
           entities:
-            - entity: light.hall_light_01_light
+            - entity: light.hall_light_01
               name: Eingang
-            - entity: light.hall_light_02_light
+            - entity: light.hall_light_02
               name: Mitte
-            - entity: light.hall_light_03_light
+            - entity: light.hall_light_03
               name: Hinten
         - title: Wohnzimmer
           type: entities
           entities:
-            - entity: light.living_light_ceiling_light
+            - entity: light.living_light_ceiling
               name: Decke
-            - entity: light.living_basket_light_light
+            - entity: light.living_basket_light
               name: Korblampe
-            - entity: light.living_ball_light_light
-              name: Ball
+            - entity: switch.living_power_switch_fairy_lights
+              name: Licherkette
         - title: Küche
           type: entities
           entities:
-            - entity: light.kitchen_light_light
+            - entity: light.kitchen_light
               name: Decke
-            - entity: light.kitchen_light_corner_light
+            - entity: light.kitchen_light_corner
               name: Eckschrank
             - type: divider
             - entity: sensor.kitchen_env_temperature
@@ -43,14 +43,14 @@ views:
         - title: Schlafzimmer
           type: entities
           entities:
-            - entity: light.sleep_light_light
+            - entity: light.sleep_light
               name: Decke
-            - entity: cover.sleep_blinds_left_cover
+            - entity: cover.sleep_blinds_left
               name: Schlafzimmerrollo (links)
-            - entity: cover.sleep_blinds_right_cover
+            - entity: cover.sleep_blinds_right
               name: Schlafzimmerrollo (rechts)
             - type: divider
-            - entity: climate.sleep_thermostat_climate
+            - entity: climate.sleep_thermostat
               name: Thermostat
             - entity: sensor.sleep_env_temperature
               name: Temperatur
@@ -65,15 +65,15 @@ views:
         - title: Bad
           type: entities
           entities:
-            - entity: light.bath_mirror_light_light
+            - entity: light.bath_mirror_light
               name: Spiegel
-            - entity: light.bath_light_01_light
+            - entity: light.bath_light_01
               name: Dusche
-            - entity: light.bath_light_02_light
+            - entity: light.bath_light_02
               name: Eingang
-            - entity: light.bath_light_03_light
+            - entity: light.bath_light_03
               name: Waschbecken
-            - entity: light.bath_light_04_light
+            - entity: light.bath_light_04
               name: Wanne
             - type: divider
             - entity: sensor.bath_env_temperature
