@@ -16,13 +16,13 @@ Insert SD card and check its device name and potentially mounted partitions with
 
 ```bash
 lsblk -p          # which device is our SD card? `/dev/sdc`?
-umount /dev/sdc1
+umount /media/$USERNAME/*
 ```
 
 Now we are ready to copy the image to the card. **THIS WILL DESTROY ALL DATA!**
 
 ```bash
-sudo dd bs=4M if=2019-09-26-raspbian-buster-lite.img of=/dev/sdc conv=fsync
+sudo dd bs=4M if=2020-08-20-raspios-buster-armhf-lite.img of=/dev/sdc conv=fsync status=progress
 ```
 
 ## Pre-Initialize the SD Card
@@ -34,8 +34,8 @@ Now we can:
 
 ```bash
 lsblk -p
-touch /media/$USER/boot/ssh               # an empty `ssh` file to enable SSH
-sudo vi /media/$USER/rootfs/etc/hostname  # the hostname to make it unique
+touch /media/$USER/boot/ssh                 # an empty `ssh` file to enable SSH
+sudo nano /media/$USER/rootfs/etc/hostname  # the hostname to make it unique
 ```
 
 ### Additional WIFI Support
@@ -43,13 +43,13 @@ sudo vi /media/$USER/rootfs/etc/hostname  # the hostname to make it unique
 If you do not want to connect the Raspberry Pi to the ethernet, you can also pre-configure your preferred WIFI network:
 
 ```bash
-vi /media/$USER/boot/wpa_supplicant.conf
+nano /media/$USER/boot/wpa_supplicant.conf
 ```
 
 ```ini
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
-country=<Insert country code here>
+country=DE
 
 network={
   ssid="<Name of your WiFi>"
@@ -64,8 +64,7 @@ See also: https://www.raspberrypi.org/documentation/configuration/wireless/headl
 Unmount the `boot` and `rootfs` partitions:
 
 ```bash
-umount /dev/sdc1
-umount /dev/sdc2
+umount /media/$USER/*
 ```
 
 Remove the SD card, plug it into the Raspberry Pi and boot it up with connected ethernet.
@@ -73,15 +72,61 @@ Remove the SD card, plug it into the Raspberry Pi and boot it up with connected 
 If you have DHCP installed you should find your Pi with the custom `hostname` set above:
 
 ```bash
-ping raspberrypi      # alt. with the previously set hostname
-ssh-copy-id pi@raspberrypi    # default password should be 'raspberry'
+ping <HOSTNAME>              # alt. with the previously set hostname
+ssh-copy-id pi@<HOSTNAME>    # default password should be 'raspberry'
+```
+
+## Boot from SSD
+
+See: https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb
+
+Update packages and firmware:
+
+```bash
+sudo sh -c '
+apt update
+apt full-upgrade -y -o Acquire::ForceIPv4=true
+echo "y" | rpi-update
+
+reboot now'
+```
+
+Update bootloader:
+
+```bash
+sudo rpi-eeprom-update -d -a
+sudo reboot now
+```
+
+Change boot options:
+
+```bash
+sudo raspi-config
+# Boot Options
+#  -> B5 Boot ROM Version
+#    -> E1 Latest
+#      -> **No** (Do NOT reset to defaults)
+#  -> B4 Boot Order
+#    -> USB Boot
+# Finish
+#  -> **No** reboot
+
+sudo dd if=/dev/mmcblk0 of=/dev/sda bs=1M conv=fsync status=progress
 ```
 
 ## Basic setup
 
 ```bash
 passwd              # change password to something random
-hostname <HOSTNAME> # change the hostname of your Pi
+sudo raspi-config
+# Advanced -> Expand disk
+# Locale Settings ->
+#  -> de_DE.UTF-8
+#  -> en_US.UTF-8
+
+sudo nano /boot/config.txt
+# disable wifi
+# disable bluethoot
 ```
 
 ## Install Docker and `docker-compose`
