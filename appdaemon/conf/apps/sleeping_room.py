@@ -1,4 +1,5 @@
 import appdaemon.plugins.hass.hassapi as hass
+import time
 from datetime import datetime, timedelta
 
 class SleepingRoomAutomation(hass.Hass):
@@ -20,22 +21,21 @@ class SleepingRoomAutomation(hass.Hass):
     else:
       self.turn_on(sleep_light)
 
-  async def on_switch_triggered(self, entity, attribute, old, new, kwargs):
-    self.log(f'"{entity}" fired [action="{new}"]')
+  def on_switch_triggered(self, entity, attribute, old, new, kwargs):
     if new == "close":
-      await self.close_blinds()
+      self.close_blinds()
     if new == "open":
-      await self.open_blinds()
+      self.open_blinds()
 
-  async def open_blinds(self):
-    await self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
-    await self.sleep(1)
-    await self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
+  def open_blinds(self):
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
+    time.sleep(0.5)
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
 
-  async def close_blinds(self):
-    await self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
-    await self.sleep(1)
-    await self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
+  def close_blinds(self):
+    self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
+    time.sleep(0.5)
+    self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
 
   work_day_factor = 1.2
   weekend_factor = 1.4
