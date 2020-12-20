@@ -1,13 +1,24 @@
 import appdaemon.plugins.hass.hassapi as hass
 from datetime import datetime, timedelta
 
-class SleepAutomation(hass.Hass):
+class SleepingRoomAutomation(hass.Hass):
 
   def initialize(self):
+    self.listen_state(self.on_light_switch_press, "sensor.sleep_switch_action", attribute="action")
+
     self.listen_state(self.on_switch_triggered, "sensor.sleep_blinds_ctrl_01_action", attribute="action")
     self.listen_state(self.on_switch_triggered, "sensor.sleep_blinds_ctrl_02_action", attribute="action")
 
     self.run_daily(self.daily_blind_opening, "04:00:00")
+
+  def on_light_switch_press(self, entity, attribute, old, new, kwargs):
+    if new != "on": return
+
+    sleep_light = "light.sleep_light_light"
+    if self.get_state(sleep_light) == "on":
+      self.turn_off(sleep_light)
+    else:
+      self.turn_on(sleep_light)
 
   async def on_switch_triggered(self, entity, attribute, old, new, kwargs):
     self.log(f'"{entity}" fired [action="{new}"]')

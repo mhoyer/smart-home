@@ -1,7 +1,3 @@
-light_switches:
-  module: light_switches
-  class: LightSwitches
-
 hall:
   module: hall
   class: HallAutomation
@@ -18,6 +14,6 @@ living_room:
   module: living_room
   class: LivingRoomAutomation
 
-sleep:
-  module: sleep_automation
-  class: SleepAutomation
+sleeping_room:
+  module: sleeping_room
+  class: SleepingRoomAutomation
