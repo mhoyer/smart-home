@@ -1,4 +1,5 @@
 import appdaemon.plugins.hass.hassapi as hass
+import time
 
 class BathRoomAutomation(hass.Hass):
 
