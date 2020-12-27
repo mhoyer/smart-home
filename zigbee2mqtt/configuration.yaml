@@ -99,6 +99,8 @@ devices:
     retain: true
   '0x00158d00041e543c':
     friendly_name: work_env
+  '0x5c0272fffe857045':
+    friendly_name: work_thermostat
   '0x680ae2fffe314a4e':
     friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
   '0xccccccfffeb49bf7':
