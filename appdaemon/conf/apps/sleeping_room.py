@@ -12,10 +12,11 @@ class SleepingRoomAutomation(hass.Hass):
 
     self.run_daily(self.daily_blind_opening, "04:00:00")
 
+
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     if new != "on": return
 
-    sleep_light = "light.sleep_light_light"
+    sleep_light = "light.sleep_light"
     if self.get_state(sleep_light) == "on":
       self.turn_off(sleep_light)
     else:
@@ -27,19 +28,19 @@ class SleepingRoomAutomation(hass.Hass):
     if new == "open":
       self.open_blinds()
 
-  def open_blinds(self):
+  def open_blinds(self, *args, **kwargs):
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
     time.sleep(0.5)
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
 
-  def close_blinds(self):
+  def close_blinds(self, *args, **kwargs):
     self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
     time.sleep(0.5)
     self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
 
   work_day_factor = 1.2
   weekend_factor = 1.4
-  def daily_blind_opening(self):
+  def daily_blind_opening(self, **kwargs):
     today = self.date()
     today_is_workday = today.weekday() < 5
 
@@ -69,6 +70,6 @@ class SleepingRoomAutomation(hass.Hass):
     self.log(f'Weekend max (winter):  {(max_sunrise + (avg_weekend_wakeup_time - max_sunrise) / self.weekend_factor).time()}\n')
 
     if today_is_workday:
-      self.run_daily(self.open_blinds, work_day_wakeup_time)
+      self.run_at(self.open_blinds, work_day_wakeup_time)
     else:
-      self.run_daily(self.open_blinds, weekend_wakeup_time)
+      self.run_at(self.open_blinds, weekend_wakeup_time)
