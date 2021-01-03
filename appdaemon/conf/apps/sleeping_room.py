@@ -40,7 +40,7 @@ class SleepingRoomAutomation(hass.Hass):
 
   work_day_factor = 1.2
   weekend_factor = 1.4
-  def daily_blind_opening(self, **kwargs):
+  def daily_blind_opening(self, *args, **kwargs):
     today = self.date()
     today_is_workday = today.weekday() < 5
 
