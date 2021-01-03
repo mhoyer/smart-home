@@ -33,11 +33,10 @@ mqtt:
 
 switch:
   - platform: mqtt
-    name: hushbox_movie_mode
-    command_topic: "hushboxctrl/movie_mode"
-    payload_on: "on"
-    payload_off: "off"
+    name: appdaemon_movie_mode
     icon: "mdi:projector"
+    command_topic: "appdaemon/movie_mode"
+    state_topic: "appdaemon/movie_mode/state"
 
 speedtestdotnet:
   # server_id: 11519 # see: http://www.speedtestserver.com/

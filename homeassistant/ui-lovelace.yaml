@@ -28,9 +28,11 @@ views:
               name: Korblampe
             - entity: switch.living_power_switch_fairy_lights
               name: Licherkette
-        - type: entity
-          entity: switch.hushbox_movie_mode
-          name: Movie Mode
+        - type: entities
+          show_header_toggle: false
+          entities:
+            - entity: switch.appdaemon_movie_mode
+              name: Movie Mode
         - title: Küche
           type: entities
           entities:
