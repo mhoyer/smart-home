@@ -6,33 +6,33 @@
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 53.81,
+        "humidity": 44.22,
         "linkquality": 41,
-        "temperature": 21.09,
-        "voltage": 3005
+        "temperature": 23.13,
+        "voltage": 3015
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 53.75,
+        "humidity": 53.48,
         "linkquality": 33,
-        "temperature": 21.26,
+        "temperature": 20.32,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 52.2,
+        "humidity": 44.35,
         "linkquality": 41,
-        "pressure": 986.6,
-        "temperature": 21.07,
+        "pressure": 996.6,
+        "temperature": 22.18,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 42,
+        "humidity": 60.04,
         "linkquality": 98,
-        "pressure": 986.2,
-        "temperature": 17.5,
-        "voltage": 3015
+        "pressure": 998,
+        "temperature": 18.95,
+        "voltage": 3005
     },
     "0x00158d0004724e85": {
         "brightness": 254,
@@ -56,17 +56,17 @@
     },
     "0x00158d00047d4108": {
         "battery": 97,
-        "illuminance": 13,
-        "illuminance_lux": 13,
+        "illuminance": 0,
+        "illuminance_lux": 0,
         "linkquality": 39,
         "occupancy": false,
         "voltage": 2995
     },
     "0x00158d000490fe24": {
-        "battery": 100,
+        "battery": 97,
         "contact": false,
         "linkquality": 54,
-        "voltage": 3005
+        "voltage": 2995
     },
     "0x00158d000521e62c": {
         "battery": 100,
@@ -92,7 +92,7 @@
         "update_available": true
     },
     "0x680ae2fffe1ae4e9": {
-        "linkquality": 72,
+        "linkquality": 67,
         "update_available": false
     },
     "0x680ae2fffe37b078": {
@@ -112,7 +112,7 @@
         },
         "color_temp": 500,
         "linkquality": 65,
-        "state": "OFF",
+        "state": "ON",
         "update_available": false
     },
     "0x7cb03eaa00ac909d": {
@@ -120,10 +120,10 @@
         "color": {
             "h": 30,
             "s": 100,
-            "x": 0.498625556586457,
-            "y": 0.415262788839981
+            "x": 0.455810576877562,
+            "y": 0.409644726876854
         },
-        "color_temp": 439,
+        "color_temp": 363,
         "linkquality": 26,
         "state": "OFF",
         "update_available": false
@@ -138,11 +138,11 @@
         },
         "color_temp": 423,
         "linkquality": 23,
-        "state": "OFF",
+        "state": "ON",
         "update_available": false
     },
     "0x7cb03eaa00adacd7": {
-        "brightness": 129,
+        "brightness": 254,
         "color": {
             "h": 15,
             "s": 100,
@@ -162,7 +162,7 @@
         "boost_time": 300,
         "child_lock": "UNLOCKED",
         "comfort_temperature": 20,
-        "current_heating_setpoint": "14.0",
+        "current_heating_setpoint": 13,
         "eco_temperature": 15,
         "force": "normal",
         "holidays": [
@@ -198,11 +198,11 @@
             }
         ],
         "linkquality": 72,
-        "local_temperature": 12.5,
+        "local_temperature": 17,
         "local_temperature_calibration": "-1.0",
         "max_temperature": 30,
         "min_temperature": 5,
-        "position": 15,
+        "position": 0,
         "preset": "manual",
         "system_mode": "manual",
         "update_available": false,
@@ -292,7 +292,7 @@
     "0xec1bbdfffe4354b1": {
         "brightness": 1,
         "linkquality": 41,
-        "state": "OFF",
+        "state": "ON",
         "update_available": true
     },
     "0xec1bbdfffe474333": {
@@ -326,13 +326,13 @@
     },
     "0x842e14fffe366622": {
         "state": "OFF",
-        "energy": 0.76,
+        "energy": 4.6,
         "power": 0,
         "current": 0,
-        "voltage": 225
+        "voltage": 228
     },
     "0x5c0272fffe857045": {
-        "local_temperature": 20.5,
+        "local_temperature": 19,
         "update_available": false,
         "preset": "manual",
         "away_mode": "OFF",
@@ -418,15 +418,15 @@
         "away_preset_temperature": 15,
         "auto_lock": "MANUAL",
         "away_preset_days": 1,
-        "current_heating_setpoint": 20,
+        "current_heating_setpoint": 18,
         "min_temperature": 5,
         "max_temperature": 35
     },
     "0x842e14fffe366660": {
-        "state": "OFF",
+        "state": "ON",
         "energy": 0,
         "power": 0,
         "current": 0,
-        "voltage": 228
+        "voltage": 230
     }
 }

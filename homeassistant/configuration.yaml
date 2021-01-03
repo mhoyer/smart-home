@@ -31,6 +31,14 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 
+switch:
+  - platform: mqtt
+    name: hushbox_movie_mode
+    command_topic: "hushboxctrl/movie_mode"
+    payload_on: "on"
+    payload_off: "off"
+    icon: "mdi:projector"
+
 speedtestdotnet:
   # server_id: 11519 # see: http://www.speedtestserver.com/
   scan_interval:
