@@ -93,6 +93,8 @@ views:
         - title: Arbeitszimmer
           type: entities
           entities:
+            - entity: climate.work_thermostat
+              name: Thermostat
             - entity: sensor.work_env_temperature
               name: Temperatur
 
