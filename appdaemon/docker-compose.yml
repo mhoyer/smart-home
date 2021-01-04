@@ -7,6 +7,7 @@ services:
     env_file: .env
     environment:
       HASS_URL: "http://r2d2:8123"
+      MQTT_CLIENT: "r2d2"
       TZ: "Europe/Berlin"
     volumes:
       - "./conf:/conf"

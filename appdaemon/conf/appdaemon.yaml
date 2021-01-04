@@ -7,6 +7,10 @@ appdaemon:
       type: hass
       ha_url: !env_var HASS_URL
       token: !env_var HASS_TOKEN
+    MQTT:
+      type: mqtt
+      namespace: mqtt
+      client_host: !env_var MQTT_CLIENT
   time_zone: !env_var TZ
 
 http:
