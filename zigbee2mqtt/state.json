@@ -1,37 +1,37 @@
 {
     "0x000d6ffffea94dd0": {
-        "battery": 74,
+        "battery": 11,
         "linkquality": 28,
         "update_available": true
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 44.81,
+        "humidity": 53.57,
         "linkquality": 41,
-        "temperature": 23.26,
+        "temperature": 22.15,
         "voltage": 3015
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 53.26,
+        "humidity": 59.78,
         "linkquality": 33,
-        "temperature": 21.35,
+        "temperature": 20.42,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 44.35,
+        "humidity": 53.24,
         "linkquality": 41,
-        "pressure": 996.6,
-        "temperature": 22.18,
+        "pressure": 999.9,
+        "temperature": 22.23,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 58.93,
+        "humidity": 61.79,
         "linkquality": 98,
-        "pressure": 998.8,
-        "temperature": 19.18,
+        "pressure": 1000,
+        "temperature": 19.44,
         "voltage": 3005
     },
     "0x00158d0004724e85": {
@@ -92,7 +92,7 @@
         "update_available": true
     },
     "0x680ae2fffe1ae4e9": {
-        "linkquality": 67,
+        "linkquality": 80,
         "update_available": false
     },
     "0x680ae2fffe37b078": {
@@ -102,7 +102,7 @@
         "update_available": false
     },
     "0x7cb03eaa00aa112a": {
-        "brightness": 220,
+        "brightness": 254,
         "color": {
             "h": 45,
             "hue": 9,
@@ -112,7 +112,7 @@
         },
         "color_temp": 500,
         "linkquality": 65,
-        "state": "ON",
+        "state": "OFF",
         "update_available": false
     },
     "0x7cb03eaa00ac909d": {
@@ -120,10 +120,10 @@
         "color": {
             "h": 30,
             "s": 100,
-            "x": 0.455810576877562,
-            "y": 0.409644726876854
+            "x": 0.481518772529133,
+            "y": 0.414222875135951
         },
-        "color_temp": 363,
+        "color_temp": 408,
         "linkquality": 26,
         "state": "OFF",
         "update_available": false
@@ -138,7 +138,7 @@
         },
         "color_temp": 423,
         "linkquality": 23,
-        "state": "ON",
+        "state": "OFF",
         "update_available": false
     },
     "0x7cb03eaa00adacd7": {
@@ -146,10 +146,10 @@
         "color": {
             "h": 15,
             "s": 100,
-            "x": 0.453426621399085,
-            "y": 0.409042662972206
+            "x": 0.426630127726814,
+            "y": 0.400270492791288
         },
-        "color_temp": 359,
+        "color_temp": 317,
         "linkquality": 39,
         "state": "OFF",
         "update_available": false
@@ -304,19 +304,19 @@
     "0xec1bbdfffe9cd801": {
         "brightness": 254,
         "linkquality": 52,
-        "state": "ON",
+        "state": "OFF",
         "update_available": true
     },
     "0xec1bbdfffe9ecc68": {
         "brightness": 254,
         "linkquality": 96,
-        "state": "ON",
+        "state": "OFF",
         "update_available": true
     },
     "0xec1bbdfffea2ff59": {
         "brightness": 254,
         "linkquality": 62,
-        "state": "ON",
+        "state": "OFF",
         "update_available": true
     },
     "0xec1bbdfffede164f": {
@@ -325,11 +325,11 @@
         "update_available": false
     },
     "0x842e14fffe366622": {
-        "state": "OFF",
-        "energy": 4.6,
-        "power": 0,
-        "current": 0,
-        "voltage": 228
+        "state": "ON",
+        "energy": 4.7,
+        "power": 17,
+        "current": 0.08,
+        "voltage": 226
     },
     "0x5c0272fffe857045": {
         "local_temperature": 19,
@@ -418,7 +418,7 @@
         "away_preset_temperature": 15,
         "auto_lock": "MANUAL",
         "away_preset_days": 1,
-        "current_heating_setpoint": 18,
+        "current_heating_setpoint": 19,
         "min_temperature": 5,
         "max_temperature": 35
     },
@@ -427,6 +427,6 @@
         "energy": 0,
         "power": 0,
         "current": 0,
-        "voltage": 231
+        "voltage": 229
     }
 }

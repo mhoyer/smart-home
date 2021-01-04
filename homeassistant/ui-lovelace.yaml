@@ -31,7 +31,7 @@ views:
         - type: entities
           show_header_toggle: false
           entities:
-            - entity: switch.appdaemon_movie_mode
+            - entity: input_boolean.appdaemon_movie_mode
               name: Movie Mode
         - title: Küche
           type: entities
