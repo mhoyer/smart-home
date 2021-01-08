@@ -22,7 +22,7 @@ umount /media/$USERNAME/*
 Now we are ready to copy the image to the card. **THIS WILL DESTROY ALL DATA!**
 
 ```bash
-sudo dd bs=4M if=2020-08-20-raspios-buster-armhf-lite.img of=/dev/sdc conv=fsync status=progress
+sudo dd bs=4M if=2020-12-02-raspios-buster-armhf-lite.img of=/dev/sdc conv=fsync status=progress
 ```
 
 ## Pre-Initialize the SD Card
