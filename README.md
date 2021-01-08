@@ -2,12 +2,12 @@
 
 ## Get the image
 
-Download the image as `.zip` from https://www.raspberrypi.org/downloads/raspbian/ and extract it
+Download the image as `.zip` from https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit and extract it
 
 ```bash
-curl -L https://downloads.raspberrypi.org/raspbian_lite_latest -o raspbian_lite_latest.zip
-unzip raspbian_lite_latest.zip
-rm raspbian_lite_latest.zip
+curl -L https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2020-12-04/2020-12-02-raspios-buster-armhf-lite.zip -o 2020-12-02-raspios-buster-armhf-lite.zip
+unzip 2020-12-02-raspios-buster-armhf-lite.zip
+rm 2020-12-02-raspios-buster-armhf-lite.zip
 ```
 
 ## Flash the SD Card
