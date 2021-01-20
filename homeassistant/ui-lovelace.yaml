@@ -33,6 +33,10 @@ views:
           entities:
             - entity: input_boolean.appdaemon_movie_mode
               name: Movie Mode
+            - entity: input_boolean.appdaemon_fan_mode
+              name: Hushbox Fan
+            - entity: input_number.appdaemon_fan_speed
+              name: Hushbox Fan Speed
         - title: Küche
           type: entities
           entities:

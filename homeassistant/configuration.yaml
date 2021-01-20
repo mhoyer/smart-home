@@ -36,6 +36,17 @@ input_boolean:
     name: Movie Mode
     initial: off
     icon: "mdi:projector"
+  appdaemon_fan_mode:
+    name: Hushbox Fan Mode
+    initial: off
+    icon: "mdi:fan"
+input_number:
+  appdaemon_fan_speed:
+    name: Hushbox Fan Speed
+    initial: 20
+    min: 20
+    max: 30
+    step: 1
 
 speedtestdotnet:
   # server_id: 11519 # see: http://www.speedtestserver.com/

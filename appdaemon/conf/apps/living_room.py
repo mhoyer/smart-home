@@ -16,6 +16,8 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
   def initialize(self):
     self.listen_state(self.on_light_switch_press, "sensor.living_switch_action", attribute="action")
     self.listen_state(self.on_movie_mode_change, "input_boolean.appdaemon_movie_mode", attribute="state")
+    self.listen_state(self.on_fan_mode_change, "input_boolean.appdaemon_fan_mode", attribute="state")
+    self.listen_state(self.on_fan_speed_change, "input_number.appdaemon_fan_speed", attribute="state")
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     if new != "on": return
@@ -37,3 +39,12 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       self.turn_on(self.basket_light)
       time.sleep(0.5)
       self.turn_on(self.power_switch_fairy_lights)
+
+  def on_fan_mode_change(self, entity, attribute, old, new, kwargs):
+    if new == "on":
+      self.mqtt_publish("hushboxctrl/fan_mode", "on")
+    else:
+      self.mqtt_publish("hushboxctrl/fan_mode", "off")
+
+  def on_fan_speed_change(self, entity, attribute, old, new, kwargs):
+    self.mqtt_publish("hushboxctrl/fan_speed", new)
