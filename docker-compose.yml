@@ -3,18 +3,16 @@ services:
 
   mosquitto:
     container_name: mosquitto
-    image: eclipse-mosquitto:1.6
+    image: eclipse-mosquitto:2.0
     restart: always
     ports:
       - "1883:1883"
-      - "9001:9001"
     volumes:
-      - "./mosquitto/data:/mosquitto/data"
-      - "./mosquitto/log:/mosquitto/log"
+      - "./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro"
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.16.2
+    image: koenkk/zigbee2mqtt:1.17.0
     restart: always
     devices:
       - "/dev/ttyAMA1:/dev/ttyAMA1"
