@@ -11,6 +11,7 @@ class SleepingRoomAutomation(hass.Hass):
     self.listen_state(self.on_switch_triggered, "sensor.sleep_blinds_ctrl_02_action", attribute="action")
 
     self.run_daily(self.daily_blind_opening, "04:00:00")
+    self.run_daily(self.close_blinds_partially, "sunset + 01:00:00")
 
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
@@ -32,6 +33,17 @@ class SleepingRoomAutomation(hass.Hass):
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
     time.sleep(0.5)
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
+
+  def close_blinds_partially(self, *args, **kwargs):
+    left_state = self.get_state("cover.sleep_blinds_left")
+    right_state = self.get_state("cover.sleep_blinds_right")
+
+    if (left_state == "open"):
+      self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_left", position=16)
+      time.sleep(2)
+
+    if (right_state == "open"):
+      self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_right", position=77)
 
   def close_blinds(self, *args, **kwargs):
     self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
