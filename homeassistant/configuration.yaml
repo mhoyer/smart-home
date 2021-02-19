@@ -48,6 +48,13 @@ input_number:
     max: 30
     step: 1
 
+stream:
+camera:
+  - platform: mjpeg
+    name: OctoPrint
+    still_image_url: http://k-2so/webcam/?action=snapshot
+    mjpeg_url: http://k-2so/webcam/?action=stream
+
 speedtestdotnet:
   # server_id: 11519 # see: http://www.speedtestserver.com/
   scan_interval:

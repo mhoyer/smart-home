@@ -138,6 +138,9 @@ views:
         - type: entities
           entities:
             - sensor.speedtest_ping
+
+  - title: 3D-Printer
+    cards: !include ui-octoprint.view.yaml
  
   - title: Zigbee Network
     panel: true # this renders the first card on full width, other cards in this view will not be rendered
