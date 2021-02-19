@@ -2,36 +2,39 @@
     "0x000d6ffffea94dd0": {
         "battery": 74,
         "linkquality": 28,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 55.69,
+        "humidity": 52.53,
         "linkquality": 41,
-        "temperature": 21.96,
+        "temperature": 22.83,
         "voltage": 3015
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 55.4,
+        "humidity": 53.13,
         "linkquality": 33,
-        "temperature": 21.54,
+        "temperature": 21.97,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 58.84,
+        "humidity": 59.21,
         "linkquality": 41,
-        "pressure": 981.8,
+        "pressure": 1004.3,
         "temperature": 22.18,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 61.93,
+        "humidity": 59.49,
         "linkquality": 98,
-        "pressure": 982.1,
-        "temperature": 19.67,
+        "pressure": 1004,
+        "temperature": 20.52,
         "voltage": 3005
     },
     "0x00158d0004724e85": {
@@ -42,7 +45,7 @@
         },
         "color_temp": 246,
         "linkquality": 36,
-        "state": "OFF"
+        "state": "ON"
     },
     "0x00158d0004724ead": {
         "brightness": 1,
@@ -55,12 +58,13 @@
         "state": "OFF"
     },
     "0x00158d00047d4108": {
-        "battery": 91,
+        "battery": 97,
         "illuminance": 0,
         "illuminance_lux": 0,
         "linkquality": 39,
         "occupancy": false,
-        "voltage": 2985
+        "voltage": 2995,
+        "temperature": 30
     },
     "0x00158d000490fe24": {
         "battery": 100,
@@ -78,31 +82,43 @@
         "brightness": 1,
         "linkquality": 20,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0x14b457fffe67a19c": {
-        "brightness": 1,
+        "brightness": 254,
         "linkquality": 75,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0x14b457fffe79b246": {
-        "battery": 87,
+        "battery": 74,
         "linkquality": 98,
         "update_available": true,
+        "update": {
+            "state": "available"
+        }
+    },
+    "0x680ae2fffe1ae4e9": {
+        "linkquality": 96,
+        "update_available": false,
         "update": {
             "state": "idle"
         }
     },
-    "0x680ae2fffe1ae4e9": {
-        "linkquality": 85,
-        "update_available": false
-    },
     "0x680ae2fffe37b078": {
         "battery": 56,
         "linkquality": 85,
-        "position": 87,
-        "update_available": false
+        "position": 16,
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x7cb03eaa00aa112a": {
         "brightness": 254,
@@ -116,20 +132,26 @@
         "color_temp": 500,
         "linkquality": 65,
         "state": "ON",
-        "update_available": false
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x7cb03eaa00ac909d": {
-        "brightness": 160,
+        "brightness": 254,
         "color": {
             "h": 360,
             "s": 100,
-            "x": 0.510741103773325,
-            "y": 0.414986678216401
+            "x": 0.444964784374273,
+            "y": 0.406668032982576
         },
-        "color_temp": 465,
+        "color_temp": 345,
         "linkquality": 26,
         "state": "OFF",
-        "update_available": false
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x7cb03eaa00ada7f5": {
         "brightness": 1,
@@ -142,20 +164,26 @@
         "color_temp": 405,
         "linkquality": 23,
         "state": "OFF",
-        "update_available": false
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x7cb03eaa00adacd7": {
         "brightness": 254,
         "color": {
             "h": 360,
             "s": 100,
-            "x": 0.481518772529133,
-            "y": 0.414222875135951
+            "x": 0.463162860122743,
+            "y": 0.411314131332149
         },
-        "color_temp": 408,
+        "color_temp": 375,
         "linkquality": 39,
-        "state": "ON",
-        "update_available": false
+        "state": "OFF",
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x842e14fffef154f3": {
         "auto_lock": "AUTO",
@@ -201,7 +229,7 @@
             }
         ],
         "linkquality": 72,
-        "local_temperature": 17,
+        "local_temperature": 19,
         "local_temperature_calibration": "-1.0",
         "max_temperature": 30,
         "min_temperature": 5,
@@ -247,95 +275,140 @@
                 "temperature": 15
             }
         ],
-        "battery_low": true
+        "battery_low": true,
+        "update": {
+            "state": "idle"
+        }
     },
     "0xccccccfffe708788": {
-        "battery": 21,
+        "battery": 60,
         "linkquality": 46,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffe924c55": {
         "battery": 87,
         "linkquality": 104,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffe9251f1": {
         "battery": 74,
         "linkquality": 70,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffe932c4c": {
         "battery": 87,
         "linkquality": 88,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffea2fddd": {
         "battery": 87,
         "linkquality": 93,
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffeb49bf7": {
         "brightness": 0,
         "linkquality": 72,
         "state": "OFF",
-        "update_available": false
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xccccccfffee07b63": {
         "brightness": 1,
         "linkquality": 52,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xd0cf5efffeea14b4": {
         "battery": 77,
         "linkquality": 85,
-        "position": 21,
-        "update_available": true
+        "position": 77,
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffe4354b1": {
         "brightness": 1,
         "linkquality": 41,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffe474333": {
         "brightness": 1,
         "linkquality": 54,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffe9cd801": {
         "brightness": 254,
         "linkquality": 52,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffe9ecc68": {
         "brightness": 254,
         "linkquality": 96,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffea2ff59": {
         "brightness": 254,
         "linkquality": 62,
         "state": "OFF",
-        "update_available": true
+        "update_available": true,
+        "update": {
+            "state": "available"
+        }
     },
     "0xec1bbdfffede164f": {
         "battery": 87,
         "linkquality": 70,
-        "update_available": false
+        "update_available": false,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x842e14fffe366622": {
         "state": "ON",
-        "energy": 5.86,
+        "energy": 8.38,
         "power": 17,
-        "current": 0.09,
+        "current": 0.08,
         "voltage": 222
     },
     "0x5c0272fffe857045": {
-        "local_temperature": 20,
+        "local_temperature": 20.5,
         "update_available": false,
         "preset": "manual",
         "away_mode": "OFF",
@@ -423,13 +496,16 @@
         "away_preset_days": 1,
         "current_heating_setpoint": 21,
         "min_temperature": 5,
-        "max_temperature": 35
+        "max_temperature": 35,
+        "update": {
+            "state": "idle"
+        }
     },
     "0x842e14fffe366660": {
-        "state": "OFF",
-        "energy": 0,
+        "state": "ON",
+        "energy": 0.01,
         "power": 0,
         "current": 0,
-        "voltage": 224
+        "voltage": 225
     }
 }
