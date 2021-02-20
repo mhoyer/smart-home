@@ -9,33 +9,33 @@
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 52.53,
+        "humidity": 48.42,
         "linkquality": 41,
-        "temperature": 22.83,
+        "temperature": 22.52,
         "voltage": 3015
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 53.13,
+        "humidity": 52.24,
         "linkquality": 33,
-        "temperature": 21.97,
+        "temperature": 21.5,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 59.21,
+        "humidity": 51.43,
         "linkquality": 41,
-        "pressure": 1004.3,
-        "temperature": 22.18,
+        "pressure": 1004,
+        "temperature": 21.58,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 59.49,
+        "humidity": 57.57,
         "linkquality": 98,
-        "pressure": 1004,
-        "temperature": 20.52,
-        "voltage": 3005
+        "pressure": 1004.3,
+        "temperature": 19.71,
+        "voltage": 3015
     },
     "0x00158d0004724e85": {
         "brightness": 254,
@@ -45,7 +45,7 @@
         },
         "color_temp": 246,
         "linkquality": 36,
-        "state": "ON"
+        "state": "OFF"
     },
     "0x00158d0004724ead": {
         "brightness": 1,
@@ -58,13 +58,13 @@
         "state": "OFF"
     },
     "0x00158d00047d4108": {
-        "battery": 97,
-        "illuminance": 0,
-        "illuminance_lux": 0,
+        "battery": 100,
+        "illuminance": 40,
+        "illuminance_lux": 40,
         "linkquality": 39,
         "occupancy": false,
-        "voltage": 2995,
-        "temperature": 30
+        "voltage": 3005,
+        "temperature": 29
     },
     "0x00158d000490fe24": {
         "battery": 100,
@@ -131,7 +131,7 @@
         },
         "color_temp": 500,
         "linkquality": 65,
-        "state": "ON",
+        "state": "OFF",
         "update_available": false,
         "update": {
             "state": "idle"
@@ -229,7 +229,7 @@
             }
         ],
         "linkquality": 72,
-        "local_temperature": 19,
+        "local_temperature": 15.5,
         "local_temperature_calibration": "-1.0",
         "max_temperature": 30,
         "min_temperature": 5,
@@ -281,7 +281,7 @@
         }
     },
     "0xccccccfffe708788": {
-        "battery": 60,
+        "battery": 21,
         "linkquality": 46,
         "update_available": true,
         "update": {
@@ -401,14 +401,14 @@
         }
     },
     "0x842e14fffe366622": {
-        "state": "ON",
-        "energy": 8.38,
-        "power": 17,
-        "current": 0.08,
-        "voltage": 222
+        "state": "OFF",
+        "energy": 8.47,
+        "power": 0,
+        "current": 0,
+        "voltage": 223
     },
     "0x5c0272fffe857045": {
-        "local_temperature": 20.5,
+        "local_temperature": 20,
         "update_available": false,
         "preset": "manual",
         "away_mode": "OFF",
@@ -502,10 +502,10 @@
         }
     },
     "0x842e14fffe366660": {
-        "state": "ON",
+        "state": "OFF",
         "energy": 0.01,
         "power": 0,
         "current": 0,
-        "voltage": 225
+        "voltage": 226
     }
 }
