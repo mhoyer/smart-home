@@ -12,7 +12,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.17.1
+    image: koenkk/zigbee2mqtt:1.18.1
     restart: always
     devices:
       - "/dev/ttyAMA1:/dev/ttyAMA1"
@@ -37,7 +37,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:2021.2.2
+    image: homeassistant/raspberrypi4-homeassistant:2021.3.4
     restart: always
     environment:
       TZ: "Europe/Berlin"

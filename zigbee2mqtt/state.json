@@ -9,33 +9,33 @@
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 52.47,
+        "humidity": 53.68,
         "linkquality": 41,
-        "temperature": 22.11,
-        "voltage": 3015
+        "temperature": 22.46,
+        "voltage": 3005
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 52.9,
+        "humidity": 56.52,
         "linkquality": 33,
-        "temperature": 21.58,
+        "temperature": 21.42,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 53.67,
+        "humidity": 57.05,
         "linkquality": 41,
-        "pressure": 1010.6,
+        "pressure": 981.9,
         "temperature": 21.52,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 57.04,
+        "humidity": 60.09,
         "linkquality": 98,
-        "pressure": 1011,
-        "temperature": 20.29,
-        "voltage": 3015
+        "pressure": 982,
+        "temperature": 20.05,
+        "voltage": 3005
     },
     "0x00158d0004724e85": {
         "brightness": 254,
@@ -58,12 +58,12 @@
         "state": "OFF"
     },
     "0x00158d00047d4108": {
-        "battery": 100,
-        "illuminance": 56,
-        "illuminance_lux": 56,
+        "battery": 97,
+        "illuminance": 0,
+        "illuminance_lux": 0,
         "linkquality": 39,
         "occupancy": false,
-        "voltage": 3005,
+        "voltage": 2995,
         "temperature": 29
     },
     "0x00158d000490fe24": {
@@ -79,7 +79,7 @@
         "voltage": 3045
     },
     "0x14b457fffe5bbcb3": {
-        "brightness": 1,
+        "brightness": 254,
         "linkquality": 20,
         "state": "OFF",
         "update_available": true,
@@ -105,7 +105,7 @@
         }
     },
     "0x680ae2fffe1ae4e9": {
-        "linkquality": 101,
+        "linkquality": 88,
         "update_available": false,
         "update": {
             "state": "idle"
@@ -131,7 +131,7 @@
         },
         "color_temp": 500,
         "linkquality": 65,
-        "state": "OFF",
+        "state": "ON",
         "update_available": false,
         "update": {
             "state": "idle"
@@ -154,14 +154,14 @@
         }
     },
     "0x7cb03eaa00ada7f5": {
-        "brightness": 1,
+        "brightness": 188,
         "color": {
             "h": 360,
             "s": 100,
-            "x": 0.480605846110259,
-            "y": 0.414121460663327
+            "x": 0.476993298233858,
+            "y": 0.413675289942435
         },
-        "color_temp": 405,
+        "color_temp": 399,
         "linkquality": 23,
         "state": "OFF",
         "update_available": false,
@@ -170,14 +170,14 @@
         }
     },
     "0x7cb03eaa00adacd7": {
-        "brightness": 254,
+        "brightness": 244,
         "color": {
             "h": 360,
             "s": 100,
-            "x": 0.463162860122743,
-            "y": 0.411314131332149
+            "x": 0.474324856106916,
+            "y": 0.413299979486579
         },
-        "color_temp": 375,
+        "color_temp": 394,
         "linkquality": 39,
         "state": "OFF",
         "update_available": false,
@@ -229,7 +229,7 @@
             }
         ],
         "linkquality": 72,
-        "local_temperature": 18.5,
+        "local_temperature": 18,
         "local_temperature_calibration": "-1.0",
         "max_temperature": 30,
         "min_temperature": 5,
@@ -281,7 +281,7 @@
         }
     },
     "0xccccccfffe708788": {
-        "battery": 21,
+        "battery": 16,
         "linkquality": 46,
         "update_available": true,
         "update": {
@@ -330,7 +330,7 @@
         }
     },
     "0xccccccfffee07b63": {
-        "brightness": 1,
+        "brightness": 254,
         "linkquality": 52,
         "state": "OFF",
         "update_available": true,
@@ -348,7 +348,7 @@
         }
     },
     "0xec1bbdfffe4354b1": {
-        "brightness": 1,
+        "brightness": 254,
         "linkquality": 41,
         "state": "OFF",
         "update_available": true,
@@ -357,7 +357,7 @@
         }
     },
     "0xec1bbdfffe474333": {
-        "brightness": 1,
+        "brightness": 254,
         "linkquality": 54,
         "state": "OFF",
         "update_available": true,
@@ -401,11 +401,11 @@
         }
     },
     "0x842e14fffe366622": {
-        "state": "OFF",
-        "energy": 8.63,
-        "power": 0,
-        "current": 0,
-        "voltage": 226
+        "state": "ON",
+        "energy": 10.09,
+        "power": 17,
+        "current": 0.09,
+        "voltage": 224
     },
     "0x5c0272fffe857045": {
         "local_temperature": 20,
