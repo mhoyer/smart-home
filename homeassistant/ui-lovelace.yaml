@@ -44,6 +44,8 @@ views:
               name: Decke
             - entity: light.kitchen_light_corner
               name: Eckschrank
+            - entity: switch.power_switch_01
+              name: Sternchen
             - type: divider
             - entity: sensor.kitchen_env_temperature
               name: Temperatur

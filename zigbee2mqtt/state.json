@@ -9,32 +9,32 @@
     },
     "0x00158d00041dffcf": {
         "battery": 100,
-        "humidity": 48.42,
+        "humidity": 52.47,
         "linkquality": 41,
-        "temperature": 22.52,
+        "temperature": 22.11,
         "voltage": 3015
     },
     "0x00158d00041e543c": {
         "battery": 100,
-        "humidity": 52.24,
+        "humidity": 52.9,
         "linkquality": 33,
-        "temperature": 21.5,
+        "temperature": 21.58,
         "voltage": 3005
     },
     "0x00158d0004210e5d": {
         "battery": 100,
-        "humidity": 51.43,
+        "humidity": 53.67,
         "linkquality": 41,
-        "pressure": 1004,
-        "temperature": 21.58,
+        "pressure": 1010.6,
+        "temperature": 21.52,
         "voltage": 3005
     },
     "0x00158d00044f7d2b": {
         "battery": 100,
-        "humidity": 57.57,
+        "humidity": 57.04,
         "linkquality": 98,
-        "pressure": 1004.3,
-        "temperature": 19.71,
+        "pressure": 1011,
+        "temperature": 20.29,
         "voltage": 3015
     },
     "0x00158d0004724e85": {
@@ -45,7 +45,7 @@
         },
         "color_temp": 246,
         "linkquality": 36,
-        "state": "OFF"
+        "state": "ON"
     },
     "0x00158d0004724ead": {
         "brightness": 1,
@@ -59,8 +59,8 @@
     },
     "0x00158d00047d4108": {
         "battery": 100,
-        "illuminance": 40,
-        "illuminance_lux": 40,
+        "illuminance": 56,
+        "illuminance_lux": 56,
         "linkquality": 39,
         "occupancy": false,
         "voltage": 3005,
@@ -97,7 +97,7 @@
         }
     },
     "0x14b457fffe79b246": {
-        "battery": 74,
+        "battery": 87,
         "linkquality": 98,
         "update_available": true,
         "update": {
@@ -105,7 +105,7 @@
         }
     },
     "0x680ae2fffe1ae4e9": {
-        "linkquality": 96,
+        "linkquality": 101,
         "update_available": false,
         "update": {
             "state": "idle"
@@ -229,7 +229,7 @@
             }
         ],
         "linkquality": 72,
-        "local_temperature": 15.5,
+        "local_temperature": 18.5,
         "local_temperature_calibration": "-1.0",
         "max_temperature": 30,
         "min_temperature": 5,
@@ -402,10 +402,10 @@
     },
     "0x842e14fffe366622": {
         "state": "OFF",
-        "energy": 8.47,
+        "energy": 8.63,
         "power": 0,
         "current": 0,
-        "voltage": 223
+        "voltage": 226
     },
     "0x5c0272fffe857045": {
         "local_temperature": 20,
@@ -502,10 +502,10 @@
         }
     },
     "0x842e14fffe366660": {
-        "state": "OFF",
+        "state": "ON",
         "energy": 0.01,
         "power": 0,
         "current": 0,
-        "voltage": 226
+        "voltage": 229
     }
 }

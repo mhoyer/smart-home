@@ -4,9 +4,11 @@ class KitchenAutomation(hass.Hass):
 
   main_light = "light.kitchen_light"
   corner_light = "light.kitchen_light_corner"
+  fairy_lights = "switch.power_switch_01"
 
   def initialize(self):
     self.listen_state(self.on_light_switch_press, "sensor.kitchen_switch_action", attribute="action")
+    self.run_daily(self.daily_turn_off_lights, "00:30:00")
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     if new == "on":
@@ -20,3 +22,5 @@ class KitchenAutomation(hass.Hass):
       else:
         self.turn_off(self.corner_light)
 
+  def daily_turn_off_lights(self, *args, **kwargs):
+    self.turn_off(self.fairy_lights)
