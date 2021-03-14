@@ -80,6 +80,40 @@ ssh-copy-id pi@<HOSTNAME>    # default password should be 'raspberry'
 
 See: https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb
 
+Change boot options:
+
+```bash
+sudo raspi-config
+# 6 Advanced Options
+#   A6 Boot Order
+#     -> USB Boot
+#   A7 Bootloader Version
+#     E1 Latest
+#       -> **No** (Do NOT reset to defaults)
+# Finish
+#  -> **No** reboot
+
+sudo dd if=/dev/mmcblk0 of=/dev/sda bs=1M conv=fsync status=progress
+sudo shutdown now
+```
+
+Now power off the Pi, remove the SD card and turn it on again.
+
+## Basic setup
+
+```bash
+passwd              # change password to something random
+sudo raspi-config
+# Advanced -> Expand disk
+# Locale Settings ->
+#  -> de_DE.UTF-8
+#  -> en_US.UTF-8
+
+sudo nano /boot/config.txt
+# disable wifi
+# disable bluethoot
+```
+
 Update packages and firmware:
 
 ```bash
@@ -96,37 +130,6 @@ Update bootloader:
 ```bash
 sudo rpi-eeprom-update -d -a
 sudo reboot now
-```
-
-Change boot options:
-
-```bash
-sudo raspi-config
-# Boot Options
-#  -> B5 Boot ROM Version
-#    -> E1 Latest
-#      -> **No** (Do NOT reset to defaults)
-#  -> B4 Boot Order
-#    -> USB Boot
-# Finish
-#  -> **No** reboot
-
-sudo dd if=/dev/mmcblk0 of=/dev/sda bs=1M conv=fsync status=progress
-```
-
-## Basic setup
-
-```bash
-passwd              # change password to something random
-sudo raspi-config
-# Advanced -> Expand disk
-# Locale Settings ->
-#  -> de_DE.UTF-8
-#  -> en_US.UTF-8
-
-sudo nano /boot/config.txt
-# disable wifi
-# disable bluethoot
 ```
 
 ## Install Docker and `docker-compose`
@@ -149,8 +152,7 @@ sudo usermod -aG docker pi
 ### `docker-compose`
 
 ```bash
-sudo apt-get install -y libffi-dev libssl-dev
-sudo apt-get install -y python3 python3-pip
+sudo apt-get install -y libffi-dev libssl-dev python3 python3-pip
 sudo apt-get remove python-configparser
 sudo pip3 install docker-compose
 ```
