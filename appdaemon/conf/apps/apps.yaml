@@ -17,3 +17,7 @@ living_room:
 sleeping_room:
   module: sleeping_room
   class: SleepingRoomAutomation
+
+work_room:
+  module: work_room
+  class: WorkRoomAutomation
