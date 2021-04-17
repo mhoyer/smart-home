@@ -28,6 +28,8 @@ views:
               name: Korblampe
             - entity: switch.living_power_switch_fairy_lights
               name: Licherkette
+            - entity: light.living_ball_light
+              name: Das Ball
         - type: entities
           show_header_toggle: false
           entities:

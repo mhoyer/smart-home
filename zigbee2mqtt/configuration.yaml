@@ -4,8 +4,9 @@ mqtt:
   base_topic: zigbee2mqtt
   server: 'mqtt://mosquitto'
 serial:
-  port: /dev/ttyAMA1
+  port: /dev/ttyAMA0
 advanced:
+  pan_id: 6755
   log_level: debug
   log_output:
     - console
@@ -107,3 +108,7 @@ devices:
     friendly_name: '0xccccccfffeb49bf7'
   '0x842e14fffe366660':
     friendly_name: power_switch_01
+  '0x60a423fffe61dd24':
+    friendly_name: 'work_laser_printer_switch'
+  '0x60a423fffe652cf6':
+    friendly_name: 'work_3d_printer_switch'
