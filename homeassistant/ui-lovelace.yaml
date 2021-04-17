@@ -11,6 +11,7 @@ views:
         cards:
         - title: Flur
           type: entities
+          icon: mdi:shoe-sneaker
           show_header_toggle: true
           entities:
             - entity: light.hall_light_01
@@ -19,8 +20,10 @@ views:
               name: Mitte
             - entity: light.hall_light_03
               name: Hinten
+
         - title: Wohnzimmer
           type: entities
+          icon: mdi:sofa
           entities:
             - entity: light.living_light_ceiling
               name: Decke
@@ -30,6 +33,7 @@ views:
               name: Licherkette
             - entity: light.living_ball_light
               name: Das Ball
+
         - type: entities
           show_header_toggle: false
           entities:
@@ -39,8 +43,10 @@ views:
               name: Hushbox Fan
             - entity: input_number.appdaemon_fan_speed
               name: Hushbox Fan Speed
+
         - title: Küche
           type: entities
+          icon: mdi:silverware-fork-knife
           entities:
             - entity: light.kitchen_light
               name: Decke
@@ -53,8 +59,10 @@ views:
               name: Temperatur
             - entity: sensor.kitchen_env_humidity
               name: Luftfeuchtigkeit
+
         - title: Schlafzimmer
           type: entities
+          icon: mdi:bed
           entities:
             - entity: light.sleep_light
               name: Decke
@@ -75,8 +83,10 @@ views:
               name: Schlafzimmerrollo (links)
             - entity: sensor.sleep_blinds_right_battery 
               name: Schlafzimmerrollo (rechts)
+
         - title: Bad
           type: entities
+          icon: mdi:shower
           entities:
             - entity: light.bath_mirror_light
               name: Spiegel
@@ -102,7 +112,11 @@ views:
 
         - title: Arbeitszimmer
           type: entities
+          icon: mdi:briefcase
           entities:
+            - entity: switch.work_laser_printer_switch
+              name: Drucker (HP-LaserJet-P2015dn)
+              icon: mdi:printer
             - entity: climate.work_thermostat
               name: Thermostat
             - entity: sensor.work_env_temperature
