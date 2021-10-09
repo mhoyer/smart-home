@@ -29,6 +29,7 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       list(map(self.turn_on, self.ambient_lights))
 
   def on_movie_mode_change(self, entity, attribute, old, new, kwargs):
+    self.log(f"Change movie mode: {new}")
     if new == "on":
       self.mqtt_publish("hushboxctrl/movie_mode", "on")
       self.set_state("input_boolean.appdaemon_fan_mode", state="on")
@@ -55,10 +56,12 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
 
 
   def on_fan_mode_change(self, entity, attribute, old, new, kwargs):
+    self.log(f"Change fan mode: {new}")
     if new == "on":
       self.mqtt_publish("hushboxctrl/fan_mode", "on")
     else:
       self.mqtt_publish("hushboxctrl/fan_mode", "off")
 
   def on_fan_speed_change(self, entity, attribute, old, new, kwargs):
+    self.log(f"Set fan speed: {new}")
     self.mqtt_publish("hushboxctrl/fan_speed", new)
