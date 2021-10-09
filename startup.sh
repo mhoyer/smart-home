@@ -5,6 +5,6 @@ sleep 1
 docker-compose up -d zigbee2mqtt
 sleep 2
 docker-compose up -d homeassistant
-sleep 5
+sleep 10
 docker-compose up -d appdaemon
 

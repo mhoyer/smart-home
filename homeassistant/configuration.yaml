@@ -4,7 +4,7 @@ lovelace:
   mode: yaml
   resources:
     - type: module
-      url: /local/zigbee2mqtt-networkmap.js?v=0.6.0
+      url: /local/zigbee2mqtt-networkmap.js?v=0.7.0
       # see: https://github.com/azuwis/zigbee2mqtt-networkmap
     - type: module
       url: /local/mini-graph-card-bundle.js?v=0.9.4

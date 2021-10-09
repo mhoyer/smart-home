@@ -12,7 +12,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.18.1
+    image: koenkk/zigbee2mqtt:1.21.2
     restart: always
     devices:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
@@ -37,7 +37,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:2021.3.4
+    image: homeassistant/raspberrypi4-homeassistant:2021.10.2
     restart: always
     environment:
       TZ: "Europe/Berlin"
@@ -49,7 +49,8 @@ services:
   appdaemon:
     # should wait for HASS to run
     container_name: appdaemon
-    image: pixelplastic/rpi-appdaemon:4.0.5
+    # see ../rpi-appdaemon/
+    image: pixelplastic/rpi-appdaemon:4.1.0
     restart: always
     env_file: appdaemon/.env
     environment:
