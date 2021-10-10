@@ -114,7 +114,19 @@ sudo nano /boot/config.txt
 # disable bluethoot
 ```
 
-Update packages and firmware:
+### Enable `cgroup_enable=memory`
+
+This is for docker as it shows up in logs as an error. See: https://www.gerbenvanadrichem.com/infrastructure/docker-on-raspbian-cgroup-not-supported-on-this-system/
+
+```bash
+sudo echo "cgroup_enable=memory" >> /boot/cmdline.txt
+```
+
+### Enable quirks mode for second SSD
+
+See: [SSD-ISSUE](./SSD-ISSUE.md)
+
+### Update packages and firmware
 
 ```bash
 sudo sh -c '
