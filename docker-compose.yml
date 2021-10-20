@@ -27,7 +27,7 @@ services:
 
   zigbee2mqtt-assistant:
     container_name: z2ma
-    image: carldebilly/zigbee2mqttassistant:0.3.178
+    image: carldebilly/zigbee2mqttassistant:0.3.181-linux-arm32
     restart: always
     environment:
       Z2MA_SETTINGS__MQTTSERVER: "mosquitto"
