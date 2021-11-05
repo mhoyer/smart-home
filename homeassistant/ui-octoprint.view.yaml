@@ -3,10 +3,20 @@
       - entity: binary_sensor.octoprint_connected
         state: "off"
     card:
-      type: markdown
-      content: |
-        ## <ha-icon icon="mdi:printer-off"></ha-icon> Printer not connected.
-
+      type: vertical-stack
+      cards:
+      - type: entities
+        title: Printer not connected
+        icon: mdi:printer-off
+        entities:
+        - entity: switch.work_3d_printer_switch
+          name: 3D-Drucker
+          icon: mdi:printer-3d
+        - type: weblink
+          name: OctoPrint (k-2so)
+          url: http://k-2so/
+          icon: mdi:web
+       
   - type: conditional
     conditions:
       - entity: binary_sensor.octoprint_connected
@@ -14,10 +24,17 @@
     card:
       type: vertical-stack
       cards:
-      - type: entity
-        entity: sensor.octoprint_print_status
-        name: Anycubic i3 Mega S
-        icon: None
+      - type: entities
+        title: Printer connected
+        icon: mdi:printer-3d
+        entities:
+        - entity: sensor.octoprint_print_status
+          name: Anycubic i3 Mega S
+          icon: None
+        - type: weblink
+          name: OctoPrint (k-2so)
+          url: http://k-2so/
+          icon: mdi:web
       - type: "custom:mini-graph-card"
         name: Progress
         entities:
