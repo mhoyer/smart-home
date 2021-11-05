@@ -12,7 +12,7 @@
       - entity: binary_sensor.octoprint_connected
         state_not: "off"
     card:
-    - type: vertical-stack
+      type: vertical-stack
       cards:
       - type: entity
         entity: sensor.octoprint_print_status
