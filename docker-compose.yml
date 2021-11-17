@@ -19,8 +19,8 @@ services:
     environment:
       TZ: "Europe/Berlin"
       # DEBUG: "z*"
-    ports:
-      - "8080:8080"
+    #ports:
+    #  - "8080:8080"
     volumes:
       - "./zigbee2mqtt:/app/data"
       - "/run/udev:/run/udev:ro"
