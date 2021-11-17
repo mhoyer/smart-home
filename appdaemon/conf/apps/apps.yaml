@@ -1,6 +1,10 @@
+global_modules:
+  - common
+
 hall:
   module: hall
   class: HallAutomation
+  global_dependencies: global
 
 bath_room:
   module: bath_room

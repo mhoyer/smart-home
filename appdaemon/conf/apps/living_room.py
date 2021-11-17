@@ -1,6 +1,6 @@
+import time
 import appdaemon.plugins.hass.hassapi as hass
 import appdaemon.plugins.mqtt.mqttapi as mqtt
-import time
 
 class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
 

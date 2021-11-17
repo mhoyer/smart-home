@@ -3,11 +3,11 @@ services:
 
   appdaemon:
     container_name: appdaemon
-    image: acockburn/appdaemon:4.0.5
+    image: acockburn/appdaemon:4.1.0
     env_file: .env
     environment:
-      HASS_URL: "http://r2d2:8123"
-      MQTT_CLIENT: "r2d2"
+      HASS_URL: "http://192.168.178.3:8123"
+      MQTT_CLIENT: "192.168.178.3"
       TZ: "Europe/Berlin"
     volumes:
       - "./conf:/conf"
