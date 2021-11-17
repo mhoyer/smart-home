@@ -26,7 +26,11 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       list(map(self.turn_off, self.ambient_lights))
       self.turn_off(self.ceiling_light)
     else:
-      list(map(self.turn_on, self.ambient_lights))
+      if self.sun_up():
+        # to save energy when sun is up and someone presses the switch
+        self.turn_on(self.basket_light)
+      else:
+        list(map(self.turn_on, self.ambient_lights))
 
   def on_movie_mode_change(self, entity, attribute, old, new, kwargs):
     self.log(f"Change movie mode: {new}")
