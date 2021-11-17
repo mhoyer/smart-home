@@ -1,3 +1,4 @@
+import common
 import appdaemon.plugins.hass.hassapi as hass
 
 class KitchenAutomation(hass.Hass):
@@ -10,7 +11,10 @@ class KitchenAutomation(hass.Hass):
     self.listen_state(self.on_light_switch_press, "sensor.kitchen_switch_action", attribute="action")
     self.run_daily(self.daily_turn_off_lights, "00:30:00")
 
+
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
+    common.update_last_action()
+
     if new == "on":
       if self.get_state(self.main_light) == "off":
         self.turn_on(self.main_light)

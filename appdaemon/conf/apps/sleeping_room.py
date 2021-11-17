@@ -1,6 +1,7 @@
-import appdaemon.plugins.hass.hassapi as hass
-import time
 from datetime import datetime, timedelta
+import time
+import common
+import appdaemon.plugins.hass.hassapi as hass
 
 class SleepingRoomAutomation(hass.Hass):
 
@@ -15,7 +16,10 @@ class SleepingRoomAutomation(hass.Hass):
 
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
-    if new != "on": return
+    if new != "on":
+      return
+
+    common.update_last_action()
 
     sleep_light = "light.sleep_light"
     if self.get_state(sleep_light) == "on":

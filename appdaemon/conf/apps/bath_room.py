@@ -1,5 +1,6 @@
-import appdaemon.plugins.hass.hassapi as hass
+import common
 import time
+import appdaemon.plugins.hass.hassapi as hass
 
 class BathRoomAutomation(hass.Hass):
 
@@ -15,7 +16,10 @@ class BathRoomAutomation(hass.Hass):
   def initialize(self):
     self.listen_state(self.on_light_switch_press, "sensor.bath_switch_action", attribute="action")
 
+
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
+    common.update_last_action()
+
     if new == "off":
       if self.get_state(self.ceil_lights[0]) == "on":
         self.turn_lights_off()
