@@ -15,7 +15,11 @@ class BathRoomAutomation(hass.Hass):
 
   def initialize(self):
     self.listen_state(self.on_light_switch_press, "sensor.bath_switch_action", attribute="action")
+    self.listen_state(self.on_bath_motion, "binary_sensor.bath_motion_occupancy", attribute="state")
 
+
+  def on_bath_motion(self, entity, attribute, old, new, kwargs):
+    self.log(f"Some motion in bath room: {attribute}={new}.")
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     common.update_last_action()
