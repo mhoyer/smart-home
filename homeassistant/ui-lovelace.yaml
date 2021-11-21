@@ -105,7 +105,7 @@ views:
               name: Luftfeuchtigkeit
             - entity: sensor.bath_env_pressure
               name: Luftdruck
-            - entity: sensor.bath_motion_illuminance
+            - entity: sensor.bath_motion_illuminance_lux
               name: Helligkeit
             - entity: binary_sensor.bath_motion_occupancy
               name: Besetzt?
