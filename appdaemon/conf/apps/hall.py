@@ -46,6 +46,7 @@ class HallAutomation(hass.Hass):
   def cancel_auto_lights_off_timer(self):
     if self.auto_lights_off_handle:
       self.cancel_timer(self.auto_lights_off_handle)
+      self.auto_lights_off_handle = None
 
   def auto_turn_lights_off(self, kwargs=None):
     self.turn_lights_off()
