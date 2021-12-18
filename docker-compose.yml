@@ -32,19 +32,24 @@ services:
     environment:
       Z2MA_SETTINGS__MQTTSERVER: "mosquitto"
       TZ: "Europe/Berlin"
-    ports:
-      - "8124:80"
+      VIRTUAL_HOST: "z2ma.tatooine"
+    networks:
+      - nginx-proxy
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:2021.11.5
+    image: homeassistant/raspberrypi4-homeassistant:2021.12.1
     restart: always
     environment:
       TZ: "Europe/Berlin"
+      VIRTUAL_HOST: "ha.tatooine"
+      VIRTUAL_PORT: "8123"
     volumes:
       - "./homeassistant:/config"
     ports:
       - "8123:8123"
+    networks:
+      - nginx-proxy
 
   appdaemon:
     # should wait for HASS to run
@@ -59,3 +64,9 @@ services:
       TZ: "Europe/Berlin"
     volumes:
       - "./appdaemon/conf:/conf"
+
+networks:
+  nginx-proxy:
+    external:
+      name: nginx-proxy
+
