@@ -50,6 +50,7 @@ services:
       - "8123:8123"
     networks:
       - nginx-proxy
+      - default
 
   appdaemon:
     # should wait for HASS to run
