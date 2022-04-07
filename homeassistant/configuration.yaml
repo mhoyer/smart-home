@@ -21,15 +21,15 @@ sensor: !include sensor.yaml
 frontend:
   themes: !include themes.yaml
 
-mqtt:
-  discovery: true
-  broker: mosquitto
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-  will_message:
-    topic: 'hass/status'
-    payload: 'offline'
+#mqtt:
+#  discovery: true
+#  broker: mosquitto
+#  birth_message:
+#    topic: 'hass/status'
+#    payload: 'online'
+#  will_message:
+#    topic: 'hass/status'
+#    payload: 'offline'
 
 input_boolean:
   appdaemon_movie_mode:
