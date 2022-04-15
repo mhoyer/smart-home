@@ -2,7 +2,7 @@ homeassistant: true
 permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
-  server: 'mqtt://mosquitto'
+  server: mqtt://mosquitto
 serial:
   port: /dev/ttyAMA0
 advanced:
@@ -36,6 +36,8 @@ devices:
     friendly_name: living_light_ceiling
   '0x842e14fffe366622':
     friendly_name: living_power_switch_fairy_lights
+  '0xa4c13857060eac49':
+    friendly_name: sleep_power_switch_fairy_lights
   '0x7cb03eaa00ac909d':
     friendly_name: sleep_light
     retain: true
@@ -109,6 +111,6 @@ devices:
   '0x842e14fffe366660':
     friendly_name: power_switch_01
   '0x60a423fffe61dd24':
-    friendly_name: 'work_laser_printer_switch'
+    friendly_name: work_laser_printer_switch
   '0x60a423fffe652cf6':
-    friendly_name: 'work_3d_printer_switch'
+    friendly_name: work_3d_printer_switch

@@ -64,6 +64,8 @@ views:
           type: entities
           icon: mdi:bed
           entities:
+            - entity: switch.sleep_power_switch_fairy_lights
+              name: Licherkette
             - entity: light.sleep_light
               name: Decke
             - entity: cover.sleep_blinds_left
