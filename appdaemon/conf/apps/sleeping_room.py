@@ -13,6 +13,10 @@ class SleepingRoomAutomation(hass.Hass):
 
     self.run_daily(self.daily_blind_opening, "04:00:00")
     self.run_daily(self.close_blinds_partially, "sunset + 01:00:00")
+    left_state = self.get_state("cover.sleep_blinds_left")
+    right_state = self.get_state("cover.sleep_blinds_right")
+    self.log(f"Left: {left_state}")
+    self.log(f"Right: {right_state}")
 
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
