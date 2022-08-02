@@ -39,7 +39,7 @@ class SleepingRoomAutomation(hass.Hass):
 
   def open_blinds(self, *args, **kwargs):
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
-    time.sleep(0.5)
+    time.sleep(2)
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
 
   def close_blinds_partially(self, *args, **kwargs):
@@ -51,7 +51,7 @@ class SleepingRoomAutomation(hass.Hass):
       time.sleep(2)
 
     if (right_state == "open"):
-      self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_right", position=77)
+      self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_right", position=78)
 
   def close_blinds(self, *args, **kwargs):
     self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_right")
@@ -59,7 +59,7 @@ class SleepingRoomAutomation(hass.Hass):
     self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
 
   work_day_factor = 1.2
-  weekend_factor = 1.4
+  weekend_factor = 1.3
   def daily_blind_opening(self, *args, **kwargs):
     today = self.date()
     today_is_workday = today.weekday() < 5
@@ -74,7 +74,7 @@ class SleepingRoomAutomation(hass.Hass):
     max_sunrise = datetime(today.year, today.month, today.day, 8, 15)
 
     avg_work_day_wakeup_time = datetime(today.year, today.month, today.day, 6, 45)
-    avg_weekend_wakeup_time = datetime(today.year, today.month, today.day, 8, 30)
+    avg_weekend_wakeup_time = datetime(today.year, today.month, today.day, 8, 45)
 
     work_day_wakeup_time = sunrise_today + (avg_work_day_wakeup_time - sunrise_today) / self.work_day_factor
     weekend_wakeup_time = sunrise_today + (avg_weekend_wakeup_time - sunrise_today) / self.weekend_factor
