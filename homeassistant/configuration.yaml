@@ -10,6 +10,13 @@ lovelace:
       url: /local/mini-graph-card-bundle.js?v=0.9.4
       # see: https://github.com/kalkih/mini-graph-card
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.24.0.0/24
+  ip_ban_enabled: false
+  login_attempts_threshold: 5
+
 tts:
   - platform: google_translate
 
