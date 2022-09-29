@@ -56,7 +56,7 @@ services:
     # should wait for HASS to run
     container_name: appdaemon
     # see ../rpi-appdaemon/
-    image: pixelplastic/rpi-appdaemon:4.1.0
+    image: pixelplastic/rpi-appdaemon:4.2.1
     restart: always
     env_file: appdaemon/.env
     environment:

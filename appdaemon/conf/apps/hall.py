@@ -32,12 +32,14 @@ class HallAutomation(hass.Hass):
       self.turn_lights_on()
 
   def on_main_door_contact(self, entity, attribute, old, new, kwargs):
+    self.log(f"Someone opened the door. sun_up={self.sun_up()}, sunset={self.sunset()}, sunrise={self.sunrise()}, now={self.get_now()}.")
+
     if self.sun_up():
       return
 
     if new == "on":
       since_last_action=datetime.now() - common.last_action
-      self.log(f"Someone opened the door. Last action happend {int(since_last_action.total_seconds())}s ago.")
+      self.log(f"Last action happend {int(since_last_action.total_seconds())}s ago.")
       if since_last_action > timedelta(seconds = 300) \
       and self.get_state(self.lights[0]) == "off":
         self.turn_lights_on()
