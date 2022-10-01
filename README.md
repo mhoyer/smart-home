@@ -85,11 +85,11 @@ Change boot options:
 ```bash
 sudo raspi-config
 # 6 Advanced Options
-#   A6 Boot Order
-#     -> USB Boot
 #   A7 Bootloader Version
 #     E1 Latest
 #       -> **No** (Do NOT reset to defaults)
+#   A6 Boot Order
+#     -> USB Boot
 # Finish
 #  -> **No** reboot
 
@@ -119,7 +119,7 @@ sudo nano /boot/config.txt
 This is for docker as it shows up in logs as an error. See: https://www.gerbenvanadrichem.com/infrastructure/docker-on-raspbian-cgroup-not-supported-on-this-system/
 
 ```bash
-sudo echo "cgroup_enable=memory" >> /boot/cmdline.txt
+sudo echo " cgroup_enable=memory " >> /boot/cmdline.txt
 ```
 
 ### Enable quirks mode for second SSD
@@ -151,7 +151,7 @@ See: https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-rasp
 ### Pre-requisits
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl gnupg2 python-pip
+sudo apt install apt-transport-https ca-certificates curl gnupg2 python3-pip
 ```
 
 ### Docker
