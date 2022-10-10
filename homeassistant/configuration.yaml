@@ -54,6 +54,10 @@ input_number:
     min: 20
     max: 30
     step: 1
+input_button:
+  living_power_hifi:
+    name: Hifi Power
+    icon: mdi:radio
 
 stream:
 camera:

@@ -1,7 +1,8 @@
 import common
 import appdaemon.plugins.hass.hassapi as hass
+import appdaemon.plugins.mqtt.mqttapi as mqtt
 
-class KitchenAutomation(hass.Hass):
+class KitchenAutomation(hass.Hass, mqtt.Mqtt):
 
   main_light = "light.kitchen_light"
   corner_light = "light.kitchen_light_corner"
@@ -9,8 +10,11 @@ class KitchenAutomation(hass.Hass):
 
   def initialize(self):
     self.listen_state(self.on_light_switch_press, "sensor.kitchen_switch_action", attribute="action")
+    self.listen_state(self.on_living_hifi_power_toggle, "input_button.living_power_hifi", attribute="state")
     self.run_daily(self.daily_turn_off_lights, "00:30:00")
 
+  def on_living_hifi_power_toggle(self, entity, attribute, old, new, kwargs):
+    self.mqtt_publish("squeezy_kitchen/hifi_power_toggle", "on")
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     common.update_last_action()
