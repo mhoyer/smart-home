@@ -1,13 +1,18 @@
 *.log
 *.backup
 .env
+.vscode
 __pycache__/
 
 node_modules/
 
+appdaemon/conf/dashboards/
+
 homeassistant/.HA_VERSION
 homeassistant/.storage/
-homeassistant/home-assistant_v2.db
+homeassistant/blueprints/
+homeassistant/home-assistant.log*
+homeassistant/home-assistant_v2.db*
 
 zigbee2mqtt/log
 zigbee2mqtt/state.json
