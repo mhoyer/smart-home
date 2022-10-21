@@ -9,6 +9,9 @@ lovelace:
     - type: module
       url: /local/mini-graph-card-bundle.js?v=0.11.0
       # see: https://github.com/kalkih/mini-graph-card
+    - type: module
+      url: /local/slider-entity-row.js?v=17.2.1
+      # see: https://github.com/thomasloven/lovelace-slider-entity-row
   dashboards:
     lovelace-lms:
       mode: yaml

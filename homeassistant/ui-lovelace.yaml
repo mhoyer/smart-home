@@ -19,6 +19,8 @@ views:
               - entity: light.living_basket_light
                 name: Korblampe
                 icon: mdi:lamp
+                type: custom:slider-entity-row
+                toggle: true
               - entity: switch.living_power_switch_fairy_lights
                 name: Licherkette
                 icon: mdi:string-lights
@@ -50,6 +52,8 @@ views:
               - entity: light.bath_mirror_light
                 name: Licht Badspiegel
                 icon: mdi:mirror
+                type: custom:slider-entity-row
+                toggle: true
 
       - type: vertical-stack
         cards:
@@ -60,9 +64,18 @@ views:
               - entity: light.kitchen_light
                 name: Decke
                 icon: mdi:ceiling-light
+                type: custom:slider-entity-row
+                toggle: true
               - entity: light.kitchen_light_corner
                 name: Eckschrank
                 icon: mdi:lamp
+                type: custom:slider-entity-row
+                toggle: true
+              - entity: light.kitchen_wireless_control_driver
+                name: Arbeitsplatte
+                icon: mdi:lightbulb-fluorescent-tube-outline
+                type: custom:slider-entity-row
+                toggle: true
               - entity: switch.power_switch_01
                 name: Sternchen
                 icon: mdi:string-lights
@@ -85,6 +98,8 @@ views:
               - entity: light.sleep_light
                 name: Decke
                 icon: mdi:ceiling-light
+                type: custom:slider-entity-row
+                toggle: true
               - type: divider
               - entity: cover.sleep_blinds_left
                 name: Schlafzimmerrollo (links)
@@ -126,15 +141,21 @@ views:
             - entity: light.living_light_ceiling
               name: Decke
               icon: mdi:ceiling-light
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.living_basket_light
               name: Korblampe
               icon: mdi:lamp
+              type: custom:slider-entity-row
+              toggle: true
             - entity: switch.living_power_switch_fairy_lights
               name: Licherkette
               icon: mdi:string-lights
             - entity: light.living_ball_light
               name: Das Ball
               icon: mdi:crystal-ball
+              type: custom:slider-entity-row
+              toggle: true
       - type: vertical-stack
         cards:
         - title: Kino
@@ -180,9 +201,18 @@ views:
             - entity: light.kitchen_light
               name: Decke
               icon: mdi:ceiling-light
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.kitchen_light_corner
               name: Eckschrank
               icon: mdi:lamp
+              type: custom:slider-entity-row
+              toggle: true
+            - entity: light.kitchen_wireless_control_driver
+              name: Arbeitsplatte
+              icon: mdi:lightbulb-fluorescent-tube-outline
+              type: custom:slider-entity-row
+              toggle: true
             - entity: switch.power_switch_01
               name: Sternchen
               icon: mdi:string-lights
@@ -202,10 +232,6 @@ views:
 
       - type: vertical-stack
         cards:
-        # - type: entities
-        #   entities:
-        #     - entity: sensor.kitchen_env_temperature
-        #       name: Temperatur
         - type: custom:mini-graph-card
           height: 100
           font_size: 60
@@ -251,6 +277,8 @@ views:
               icon: mdi:string-lights
             - entity: light.sleep_light
               name: Decke
+              type: custom:slider-entity-row
+              toggle: true
       - title: Rollos
         type: entities
         icon: mdi:gauge
@@ -311,18 +339,28 @@ views:
             - entity: light.bath_light_01
               name: Dusche
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.bath_light_02
               name: Eingang
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.bath_light_03
               name: Waschbecken
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.bath_light_04
               name: Wanne
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - type: divider
             - entity: light.bath_mirror_light
               name: Spiegel
+              type: custom:slider-entity-row
+              toggle: true
 
       - title: Sensoren
         type: entities
@@ -364,12 +402,18 @@ views:
             - entity: light.hall_light_01
               name: Eingang
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.hall_light_02
               name: Mitte
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.hall_light_03
               name: Hinten
               icon: mdi:lightbulb-spot
+              type: custom:slider-entity-row
+              toggle: true
       - type: vertical-stack
         cards:
         - type: custom:mini-graph-card
