@@ -25,6 +25,10 @@ devices:
   '0x00158d0004724e85':
     friendly_name: kitchen_light_corner
     retain: true
+  '0x680ae2fffe314a4e':
+    friendly_name: kitchen_e1810_remote_control
+  '0x086bd7fffe3fc805':
+    friendly_name: kitchen_wireless_control_driver
   '0xccccccfffe932c4c':
     friendly_name: living_switch
   '0x7cb03eaa00aa112a':
@@ -100,17 +104,41 @@ devices:
   '0x14b457fffe5bbcb3':
     friendly_name: bath_light_04
     retain: true
-  '0x00158d00041e543c':
-    friendly_name: work_env
-  '0x5c0272fffe857045':
-    friendly_name: work_thermostat
-  '0x680ae2fffe314a4e':
-    friendly_name: 20200223-ikea-tradfri-e1810-remote-control-01
-  '0xccccccfffeb49bf7':
-    friendly_name: '0xccccccfffeb49bf7'
   '0x842e14fffe366660':
     friendly_name: power_switch_01
+  '0x00158d00041e543c':
+    friendly_name: work_env
   '0x60a423fffe61dd24':
     friendly_name: work_laser_printer_switch
   '0x60a423fffe652cf6':
     friendly_name: work_3d_printer_switch
+  '0xa4c1380282841053':
+    friendly_name: work_uap
+  '0xa4c138793b6af8be':
+    friendly_name: work_ethernet_switch
+  '0x5c0272fffe857045':
+    friendly_name: work_thermostat
+  '0xa4c138487445da05':
+    friendly_name: '0xa4c138487445da05'
+  '0xa4c138d3c19bfa83':
+    friendly_name: '0xa4c138d3c19bfa83'
+  '0xccccccfffeb49bf7':
+    friendly_name: '0xccccccfffeb49bf7'
+
+groups:
+  # ID, each group should have a different numerical ID
+  '1':
+    # Required: Name which will be used to control the group
+    friendly_name: kitchen_light_group
+    # Required: Retain messages (true/false) (default: false)
+    retain: false
+    # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
+    transition: 2
+    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
+    optimistic: true
+    # Optional: Control when state OFF is published for a group, see "State changes" below (default: all_members_off)
+    off_state: 'all_members_off'
+    # Optional: Devices of this group,
+    # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
+    devices:
+      - kitchen_wireless_control_driver
