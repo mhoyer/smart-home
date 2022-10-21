@@ -1,5 +1,117 @@
 title: Tatooine Smart Home
 views:
+  - title: Home
+    path: home
+    badges:
+      - entity: binary_sensor.updater
+      - entity: person.marcel_hoyer
+      - entity: sun.sun
+    cards:
+      - type: vertical-stack
+        cards:
+          - title: Wohnzimmer
+            icon: mdi:sofa
+            type: entities
+            entities:
+              - entity: light.living_light_ceiling
+                name: Decke
+                icon: mdi:ceiling-light
+              - entity: light.living_basket_light
+                name: Korblampe
+                icon: mdi:lamp
+              - entity: switch.living_power_switch_fairy_lights
+                name: Licherkette
+                icon: mdi:string-lights
+          - type: entities
+            entities:
+              - entity: input_boolean.appdaemon_movie_mode
+                name: Movie Mode
+                icon: mdi:theater
+              - type: weblink
+                name: Kodi (c3po)
+                url: http://c3po:8080/
+                icon: mdi:web
+
+          - title: Flur
+            icon: mdi:shoe-sneaker
+            type: entities
+            state_color: true
+            show_header_toggle: false
+            entities:
+              - entity: input_boolean.appdaemon_light_group_hall
+                name: Decke
+
+          - title: Bad
+            icon: mdi:shower
+            type: entities
+            entities:
+              - entity: input_boolean.appdaemon_light_group_bath
+                name: Decke
+              - entity: light.bath_mirror_light
+                name: Licht Badspiegel
+                icon: mdi:mirror
+
+      - type: vertical-stack
+        cards:
+          - title: Küche
+            icon: mdi:silverware-fork-knife
+            type: entities
+            entities:
+              - entity: light.kitchen_light
+                name: Decke
+                icon: mdi:ceiling-light
+              - entity: light.kitchen_light_corner
+                name: Eckschrank
+                icon: mdi:lamp
+              - entity: switch.power_switch_01
+                name: Sternchen
+                icon: mdi:string-lights
+          - type: entities
+            entities:
+              - entity: input_button.kitchen_power_hifi
+                name: Stereoanlage Küche
+              - type: weblink
+                name: Logitech Media Server
+                url: /lovelace-lms
+                icon: mdi:web
+
+          - title: Schlafzimmer
+            icon: mdi:bed
+            type: entities
+            entities:
+              - entity: switch.sleep_power_switch_fairy_lights
+                name: Licherkette
+                icon: mdi:string-lights
+              - entity: light.sleep_light
+                name: Decke
+                icon: mdi:ceiling-light
+              - type: divider
+              - entity: cover.sleep_blinds_left
+                name: Schlafzimmerrollo (links)
+              - entity: cover.sleep_blinds_right
+                name: Schlafzimmerrollo (rechts)
+
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.home
+          - type: history-graph
+            title: 'Speedtest'
+            hours_to_show: 48
+            refresh_interval: 0
+            entities:
+              - entity: sensor.speedtest_download
+                name: Download
+              - entity: sensor.speedtest_upload
+                name: Upload
+          - type: entities
+            entities:
+              - sensor.speedtest_ping
+              - type: button
+                name: Reload Lovelace
+                tap_action:
+                  action: call-service
+                  service: lovelace.reload_resources
 
   - title: Wohnzimmer
     path: living

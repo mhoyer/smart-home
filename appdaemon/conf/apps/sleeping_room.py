@@ -3,13 +3,16 @@ import time
 import common
 import appdaemon.plugins.hass.hassapi as hass
 
+light_switch_entity = "sensor.sleep_switch_action"
+blind_switches = [
+  "sensor.sleep_blinds_ctrl_01_action",
+  "sensor.sleep_blinds_ctrl_02_action"
+]
+
 class SleepingRoomAutomation(hass.Hass):
-
   def initialize(self):
-    self.listen_state(self.on_light_switch_press, "sensor.sleep_switch_action", attribute="action")
-
-    self.listen_state(self.on_switch_triggered, "sensor.sleep_blinds_ctrl_01_action", attribute="action")
-    self.listen_state(self.on_switch_triggered, "sensor.sleep_blinds_ctrl_02_action", attribute="action")
+    self.listen_state(self.on_light_switch_press, light_switch_entity, attribute="action")
+    self.listen_state(self.on_switch_triggered, blind_switches, attribute="action")
 
     self.run_daily(self.daily_blind_opening, "04:00:00")
     self.run_daily(self.close_blinds_partially, "sunset + 01:00:00")
@@ -17,7 +20,6 @@ class SleepingRoomAutomation(hass.Hass):
     right_state = self.get_state("cover.sleep_blinds_right")
     self.log(f"Left: {left_state}")
     self.log(f"Right: {right_state}")
-
 
   def on_light_switch_press(self, entity, attribute, old, new, kwargs):
     if new != "on":

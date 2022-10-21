@@ -67,6 +67,32 @@ input_boolean:
     name: Hushbox Fan Mode
     initial: off
     icon: "mdi:fan"
+
+  appdaemon_light_group_hall:
+    name: Light Group Hall
+    initial: off
+    icon: "mdi:lightbulb-group"
+  appdaemon_light_group_living:
+    name: Light Group Living
+    initial: off
+    icon: "mdi:lightbulb-group"
+  appdaemon_light_group_kitchen:
+    name: Light Group Kitchen
+    initial: off
+    icon: "mdi:lightbulb-group"
+  appdaemon_light_group_bath:
+    name: Light Group Bath
+    initial: off
+    icon: "mdi:lightbulb-group"
+  appdaemon_light_group_sleep:
+    name: Light Group Sleep
+    initial: off
+    icon: "mdi:lightbulb-group"
+  appdaemon_light_group_work:
+    name: Light Group Work
+    initial: off
+    icon: "mdi:lightbulb-group"
+
 input_number:
   appdaemon_fan_speed:
     name: Hushbox Fan Speed
@@ -75,7 +101,7 @@ input_number:
     max: 30
     step: 1
 input_button:
-  living_power_hifi:
+  kitchen_power_hifi:
     name: Hifi Power
     icon: mdi:radio
 
