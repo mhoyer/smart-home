@@ -9,6 +9,26 @@ lovelace:
     - type: module
       url: /local/mini-graph-card-bundle.js?v=0.11.0
       # see: https://github.com/kalkih/mini-graph-card
+  dashboards:
+    lovelace-lms:
+      mode: yaml
+      filename: ui-lms.yaml
+      title: Media Server
+      icon: mdi:cast-audio
+    lovelace-3dprint:
+      mode: yaml
+      filename: ui-3d-printing.yaml
+      title: 3D-Printing
+      icon: mdi:printer-3d
+      show_in_sidebar: true
+      require_admin: true
+    lovelace-zigbee:
+      mode: yaml
+      filename: ui-zigbee.yaml
+      title: Zigbee
+      icon: mdi:zigbee
+      show_in_sidebar: true
+      require_admin: true
 
 http:
   use_x_forwarded_for: true

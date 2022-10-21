@@ -1,40 +1,33 @@
 title: Tatooine Smart Home
 views:
-  - path: default_view
-    title: Home
-    badges:
-      - entity: binary_sensor.updater
-      - entity: person.marcel_hoyer
-      - entity: sun.sun
+
+  - title: Wohnzimmer
+    path: living
+    icon: mdi:sofa
     cards:
       - type: vertical-stack
         cards:
-        - title: Flur
+        - title: Licht
+          icon: mdi:lightbulb
           type: entities
-          icon: mdi:shoe-sneaker
-          show_header_toggle: true
-          entities:
-            - entity: light.hall_light_01
-              name: Eingang
-            - entity: light.hall_light_02
-              name: Mitte
-            - entity: light.hall_light_03
-              name: Hinten
-
-        - title: Wohnzimmer
-          type: entities
-          icon: mdi:sofa
           entities:
             - entity: light.living_light_ceiling
               name: Decke
+              icon: mdi:ceiling-light
             - entity: light.living_basket_light
               name: Korblampe
+              icon: mdi:lamp
             - entity: switch.living_power_switch_fairy_lights
               name: Licherkette
+              icon: mdi:string-lights
             - entity: light.living_ball_light
               name: Das Ball
-
-        - type: entities
+              icon: mdi:crystal-ball
+      - type: vertical-stack
+        cards:
+        - title: Kino
+          icon: mdi:theater
+          type: entities
           show_header_toggle: false
           entities:
             - entity: input_boolean.appdaemon_movie_mode
@@ -44,86 +37,14 @@ views:
             - entity: input_number.appdaemon_fan_speed
               name: Hushbox Fan Speed
 
-        - title: Küche
-          type: entities
-          icon: mdi:silverware-fork-knife
-          entities:
-            - entity: light.kitchen_light
-              name: Decke
-            - entity: light.kitchen_light_corner
-              name: Eckschrank
-            - entity: switch.power_switch_01
-              name: Sternchen
-            - type: divider
-            - entity: sensor.kitchen_env_temperature
-              name: Temperatur
-            - entity: sensor.kitchen_env_humidity
-              name: Luftfeuchtigkeit
+      - type: vertical-stack
+        cards:
+          - type: iframe
+            aspect_ratio: 100%
+            url: http://lms.tatooine
 
-        - title: Schlafzimmer
-          type: entities
-          icon: mdi:bed
-          entities:
-            - entity: switch.sleep_power_switch_fairy_lights
-              name: Licherkette
-            - entity: light.sleep_light
-              name: Decke
-            - entity: cover.sleep_blinds_left
-              name: Schlafzimmerrollo (links)
-            - entity: cover.sleep_blinds_right
-              name: Schlafzimmerrollo (rechts)
-            - type: divider
-            - entity: climate.sleep_thermostat
-              name: Thermostat
-            - entity: sensor.sleep_env_temperature
-              name: Temperatur
-            - entity: sensor.sleep_env_humidity
-              name: Luftfeuchtigkeit
-            - entity: sensor.sleep_env_pressure
-              name: Luftdruck
-            - entity: sensor.sleep_blinds_left_battery 
-              name: Schlafzimmerrollo (links)
-            - entity: sensor.sleep_blinds_right_battery 
-              name: Schlafzimmerrollo (rechts)
-
-        - title: Bad
-          type: entities
-          icon: mdi:shower
-          entities:
-            - entity: light.bath_mirror_light
-              name: Spiegel
-            - entity: light.bath_light_01
-              name: Dusche
-            - entity: light.bath_light_02
-              name: Eingang
-            - entity: light.bath_light_03
-              name: Waschbecken
-            - entity: light.bath_light_04
-              name: Wanne
-            - type: divider
-            - entity: sensor.bath_env_temperature
-              name: Temperatur
-            - entity: sensor.bath_env_humidity
-              name: Luftfeuchtigkeit
-            - entity: sensor.bath_env_pressure
-              name: Luftdruck
-            - entity: sensor.bath_motion_illuminance_lux
-              name: Helligkeit
-            - entity: binary_sensor.bath_motion_occupancy
-              name: Besetzt?
-
-        - title: Arbeitszimmer
-          type: entities
-          icon: mdi:briefcase
-          entities:
-            - entity: switch.work_laser_printer_switch
-              name: Drucker (HP-LaserJet-P2015dn)
-              icon: mdi:printer
-            - entity: climate.work_thermostat
-              name: Thermostat
-            - entity: sensor.work_env_temperature
-              name: Temperatur
-
+      - type: vertical-stack
+        cards:
         - type: custom:mini-graph-card
           height: 60
           font_size: 60
@@ -131,62 +52,265 @@ views:
           upper_bound: 100
           line_width: 2
           entities:
+            - entity: sensor.living_switch_battery
+              name: Living Switch
+
+  - title: Küche
+    path: kitchen
+    icon: mdi:silverware-fork-knife
+    cards:
+      - type: vertical-stack
+        cards:
+        - title: Licht
+          type: entities
+          icon: mdi:lightbulb
+          entities:
+            - entity: light.kitchen_light
+              name: Decke
+              icon: mdi:ceiling-light
+            - entity: light.kitchen_light_corner
+              name: Eckschrank
+              icon: mdi:lamp
+            - entity: switch.power_switch_01
+              name: Sternchen
+              icon: mdi:string-lights
+
+      - type: vertical-stack
+        cards:
+        - title: Audio
+          type: entities
+          icon: mdi:silverware-fork-knife
+          entities:
+            - entity: input_button.kitchen_power_hifi
+              name: Stereoanlage
+
+        - type: iframe
+          aspect_ratio: 100%
+          url: http://lms.tatooine
+
+      - type: vertical-stack
+        cards:
+        # - type: entities
+        #   entities:
+        #     - entity: sensor.kitchen_env_temperature
+        #       name: Temperatur
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
+            - entity: sensor.kitchen_env_temperature
+              name: Temperatur
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
+            - entity: sensor.kitchen_env_humidity
+              name: Luftfeuchtigkeit
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 100
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
+            - entity: sensor.kitchen_switch_battery
+              name: Kitchen Switch
+            - entity: sensor.kitchen_env_battery
+              name: Env Sensor
+
+  - title: Schlafzimmer
+    path: sleep
+    icon: mdi:bed
+    cards:
+      - type: vertical-stack
+        cards:
+        - title: Licht
+          type: entities
+          icon: mdi:lightbulb
+          entities:
+            - entity: switch.sleep_power_switch_fairy_lights
+              name: Licherkette
+              icon: mdi:string-lights
+            - entity: light.sleep_light
+              name: Decke
+      - title: Rollos
+        type: entities
+        icon: mdi:gauge
+        entities:
+            - entity: cover.sleep_blinds_left
+              name: Schlafzimmerrollo (links)
+            - entity: cover.sleep_blinds_right
+              name: Schlafzimmerrollo (rechts)
+      - title: Heizung
+        type: entities
+        icon: mdi:home-thermometer-outline
+        entities:
+            - entity: climate.sleep_thermostat
+              name: Thermostat
+      - title: Sensoren
+        type: entities
+        icon: mdi:gauge
+        entities:
+            - entity: sensor.sleep_env_temperature
+              name: Temperatur
+            - entity: sensor.sleep_env_humidity
+              name: Luftfeuchtigkeit
+            - entity: sensor.sleep_env_pressure
+              name: Luftdruck
+            - entity: sensor.sleep_blinds_left_battery
+              name: Schlafzimmerrollo (links)
+            - entity: sensor.sleep_blinds_right_battery
+              name: Schlafzimmerrollo (rechts)
+      - type: vertical-stack
+        cards:
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 100
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
+            - entity: sensor.sleep_switch_battery
+              name: Light Switch
+              show_state: true
             - entity: sensor.sleep_blinds_ctrl_01_battery
               name: Blinds Ctrl 01
+              show_state: true
             - entity: sensor.sleep_blinds_ctrl_02_battery
               name: Blinds Ctrl 02
+              show_state: true
+
+  - title: Bad
+    path: bath
+    icon: mdi:shower
+    cards:
+      - type: vertical-stack
+        cards:
+        - title: Licht
+          icon: mdi:lightbulb
+          type: entities
+          entities:
+            - entity: light.bath_light_01
+              name: Dusche
+              icon: mdi:lightbulb-spot
+            - entity: light.bath_light_02
+              name: Eingang
+              icon: mdi:lightbulb-spot
+            - entity: light.bath_light_03
+              name: Waschbecken
+              icon: mdi:lightbulb-spot
+            - entity: light.bath_light_04
+              name: Wanne
+              icon: mdi:lightbulb-spot
+            - type: divider
+            - entity: light.bath_mirror_light
+              name: Spiegel
+
+      - title: Sensoren
+        type: entities
+        icon: mdi:gauge
+        entities:
+          - entity: sensor.bath_env_temperature
+            name: Temperatur
+          - entity: sensor.bath_env_humidity
+            name: Luftfeuchtigkeit
+          - entity: sensor.bath_env_pressure
+            name: Luftdruck
+          - entity: sensor.bath_motion_illuminance_lux
+            name: Helligkeit
+          - entity: binary_sensor.bath_motion_occupancy
+            name: Besetzt?
+      - type: vertical-stack
+        cards:
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
+            - entity: sensor.bath_switch_battery
+              name: Light Switch Battery
+
+  - title: Flur
+    path: hall
+    icon: mdi:shoe-sneaker
+    cards:
+      - type: vertical-stack
+        cards:
+        - title: Licht
+          icon: mdi:lightbulb
+          type: entities
+          show_header_toggle: true
+          entities:
+            - entity: light.hall_light_01
+              name: Eingang
+              icon: mdi:lightbulb-spot
+            - entity: light.hall_light_02
+              name: Mitte
+              icon: mdi:lightbulb-spot
+            - entity: light.hall_light_03
+              name: Hinten
+              icon: mdi:lightbulb-spot
+      - type: vertical-stack
+        cards:
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
+          entities:
             - entity: sensor.hall_switch_01_battery
               name: Hall Switch 01
             - entity: sensor.hall_switch_02_battery
               name: Hall Switch 02
-            - entity: sensor.living_switch_battery
-              name: Living Switch
+            - entity: sensor.hall_door_sensor_battery
+              name: Door Sensor
 
+  - title: Arbeitszimmer
+    path: work
+    icon: mdi:briefcase
+    cards:
       - type: vertical-stack
         cards:
-        - type: weather-forecast
-          entity: weather.home
-        - type: history-graph
-          title: 'Speedtest'
-          hours_to_show: 48
-          refresh_interval: 0
+        - title: Drucker
+          type: entities
+          show_header_toggle: false
           entities:
-            - entity: sensor.speedtest_download
-              name: Download
-            - entity: sensor.speedtest_upload
-              name: Upload
-        - type: entities
+            - entity: switch.work_laser_printer_switch
+              name: Drucker (HP-LaserJet-P2015dn)
+              icon: mdi:printer
+            - entity: switch.work_3d_printer_switch
+              name: 3D-Drucker
+              icon: mdi:printer-3d
+      - title: Heizung
+        type: entities
+        icon: mdi:home-thermometer-outline
+        entities:
+            - entity: climate.work_thermostat
+              name: Thermostat
+      - title: Sensoren
+        type: entities
+        icon: mdi:gauge
+        entities:
+          - entity: sensor.work_env_temperature
+            name: Temperatur
+      - type: vertical-stack
+        cards:
+        - type: custom:mini-graph-card
+          height: 100
+          font_size: 60
+          lower_bound: 0
+          upper_bound: 100
+          line_width: 2
           entities:
-            - sensor.speedtest_ping
-
-  - title: 3D-Printer
-    cards: !include ui-octoprint.view.yaml
- 
-  - title: Zigbee Network
-    panel: true # this renders the first card on full width, other cards in this view will not be rendered
-    cards:
-      - type: custom:zigbee2mqtt-networkmap
-        entity: sensor.zigbee2mqtt_networkmap
-        # the following are optional:
-        mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
-        force: 3000 # decrease it to get smaller map if you have many devices
-        node_size: 16
-        font_size: 12
-        link_width: 2
-        height: 400 # height of the card
-        # use this css config or use whatever css tech to change look and feel,
-        # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes
-        css: |
-          :host {
-            --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
-            --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
-            --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);
-            --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);
-            --zigbee2mqtt-networkmap-hover-color: #be385d;
-            --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);
-            --zigbee2mqtt-networkmap-label-color: #127862;
-            --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);
-            --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
-            --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
-          }
+            - entity: sensor.work_env_battery
+              name: Env Sensor Battery
 

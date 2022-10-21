@@ -1,0 +1,8 @@
+title: Logitech Media Server
+views:
+  - title: Home
+    type: panel
+    path: lms
+    cards:
+      - type: iframe
+        url: http://lms.tatooine

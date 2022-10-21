@@ -1,0 +1,148 @@
+title: 3D Printing
+views:
+  - title: 3D Printing
+    path: home
+    cards:
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.octoprint_connected
+            state_not: "on"
+        card:
+          type: vertical-stack
+          cards:
+          - type: entities
+            title: Printer not connected
+            icon: mdi:printer-off
+            entities:
+            - entity: switch.work_3d_printer_switch
+              name: 3D-Drucker
+              icon: mdi:printer-3d
+            - type: weblink
+              name: OctoPrint (k-2so)
+              url: http://k-2so/
+              icon: mdi:web
+
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.octoprint_printing
+            state_not: "off"
+          - entity: binary_sensor.octoprint_printing
+            state_not: unavailable
+        card:
+          type: vertical-stack
+          cards:
+          - type: entities
+            title: Printer connected
+            icon: mdi:printer-3d
+            entities:
+            - entity: sensor.octoprint_print_status
+              name: Anycubic i3 Mega S
+              icon: None
+            - type: weblink
+              name: OctoPrint (k-2so)
+              url: http://k-2so/
+              icon: mdi:web
+          - type: "custom:mini-graph-card"
+            name: Progress
+            entities:
+            - entity: sensor.octoprint_print_progress
+              name: Progress
+              show_state: true
+            decimals: 1
+            line_width: 4
+            line_color: "#1275f3"
+            lower_bound: 0
+            upper_bound: 100
+            hours_to_show: 1
+            points_per_hour: 60
+
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.octoprint_printing
+            state_not: "off"
+          - entity: binary_sensor.octoprint_printing
+            state_not: unavailable
+        card:
+          type: vertical-stack
+          cards:
+            - type: entities
+              entities:
+                - entity: sensor.octoprint_print_time_left
+                - entity: sensor.octoprint_print_time
+                - entity: sensor.octoprint_print_file
+              show_header_toggle: false
+            - cards:
+                - entity: switch.octoprint_emergency_stop
+                  hold_action:
+                    action: more-info
+                  name: Stop
+                  show_icon: true
+                  show_name: true
+                  type: button
+                - entity: switch.octoprint_cancel_print
+                  hold_action:
+                    action: more-info
+                  name: Cancel
+                  show_icon: true
+                  show_name: true
+                  type: button
+                - entity: switch.octoprint_pause_print
+                  hold_action:
+                    action: more-info
+                  name: Pause
+                  show_icon: true
+                  show_name: true
+                  type: button
+                - entity: switch.octoprint_shutdown_system
+                  hold_action:
+                    action: more-info
+                  name: Shutdown
+                  show_icon: true
+                  show_name: true
+                  type: button
+              type: horizontal-stack
+
+      - type: "custom:mini-graph-card"
+        name: Nozzel Temperature
+        entities:
+          - entity: sensor.octoprint_tool_0_temperature
+            name: Nozzle
+            show_state: true
+        decimals: 1
+        line_width: 4
+        hours_to_show: 1
+        points_per_hour: 120
+        color_thresholds:
+          - value: 20
+            color: "#1275f3"
+          - value: 100
+            color: "#f3e312"
+          - value: 230
+            color: "#f31212"
+        lower_bound: 15
+        upper_bound: 250
+
+      - type: "custom:mini-graph-card"
+        name: Bed Temperature
+        entities:
+          - entity: sensor.octoprint_bed_temperature
+            name: Bed
+            show_state: true
+        decimals: 1
+        line_width: 4
+        hours_to_show: 1
+        points_per_hour: 120
+        color_thresholds:
+          - value: 20
+            color: "#1275f3"
+          - value: 35
+            color: "#f3e312"
+          - value: 70
+            color: "#f31212"
+        lower_bound: 15
+        upper_bound: 80
+
+      - type: picture-entity
+        name: Current Print
+        entity: camera.octoprint
+        camera_view: live
