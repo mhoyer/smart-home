@@ -124,21 +124,14 @@ devices:
     friendly_name: '0xa4c138d3c19bfa83'
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
-
+  '0x001788010b1e97b6':
+    friendly_name: '0x001788010b1e97b6'
 groups:
-  # ID, each group should have a different numerical ID
   '1':
-    # Required: Name which will be used to control the group
     friendly_name: kitchen_light_group
-    # Required: Retain messages (true/false) (default: false)
     retain: false
-    # Optional: Default transition to be used when e.g. changing brightness (in seconds) (default: 0)
     transition: 2
-    # Optional: Change group state when one of the devices in it changes state, see 'State changes' below (default: true)
     optimistic: true
-    # Optional: Control when state OFF is published for a group, see "State changes" below (default: all_members_off)
-    off_state: 'all_members_off'
-    # Optional: Devices of this group,
-    # Note: This can be the ieeeAddr of the device or the friendly_name (default: empty)
+    off_state: all_members_off
     devices:
       - kitchen_wireless_control_driver

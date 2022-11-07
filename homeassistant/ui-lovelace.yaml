@@ -436,6 +436,16 @@ views:
     cards:
       - type: vertical-stack
         cards:
+        - title: WiFi
+          type: entities
+          show_header_toggle: true
+          entities:
+            - entity: switch.work_ethernet_switch
+              name: Cisco Ethernet Switch
+              icon: mdi:ethernet
+            - entity: switch.work_uap
+              name: UniFi Access Point
+              icon: mdi:access-point
         - title: Drucker
           type: entities
           show_header_toggle: false
