@@ -24,6 +24,9 @@ views:
               - entity: switch.living_power_switch_fairy_lights
                 name: Licherkette
                 icon: mdi:string-lights
+              - entity: light.living_party_uplight
+                name: Party Deckenfluter
+                icon: mdi:floor-lamp-torchiere
           - type: entities
             entities:
               - entity: input_boolean.appdaemon_movie_mode

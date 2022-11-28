@@ -126,6 +126,9 @@ devices:
     friendly_name: '0xccccccfffeb49bf7'
   '0x001788010b1e97b6':
     friendly_name: '0x001788010b1e97b6'
+  '0x00158d0004738205':
+    friendly_name: living_party_uplight
+
 groups:
   '1':
     friendly_name: kitchen_light_group
