@@ -27,6 +27,8 @@ views:
               - entity: light.living_party_uplight
                 name: Party Deckenfluter
                 icon: mdi:floor-lamp-torchiere
+                type: custom:slider-entity-row
+                toggle: true
           - type: entities
             entities:
               - entity: input_boolean.appdaemon_movie_mode
