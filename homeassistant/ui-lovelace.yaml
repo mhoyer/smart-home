@@ -235,6 +235,15 @@ views:
           aspect_ratio: 100%
           url: http://lms.tatooine
 
+        - title: Coffee
+          type: entities
+          icon: mdi:silverware-fork-knife
+          entities:
+              - entity: switch.kitchen_xenia
+                name: Xenia
+                icon: mdi:coffee-maker
+                toggle: true
+
       - type: vertical-stack
         cards:
         - type: custom:mini-graph-card
