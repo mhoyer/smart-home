@@ -237,12 +237,16 @@ views:
 
         - title: Coffee
           type: entities
-          icon: mdi:silverware-fork-knife
+          icon: mdi:coffee-outline
           entities:
-              - entity: switch.kitchen_xenia
-                name: Xenia
-                icon: mdi:coffee-maker
-                toggle: true
+            - entity: switch.kitchen_xenia
+              name: Xenia
+              icon: mdi:coffee-maker-outline
+              toggle: true
+            - entity: switch.kitchen_df64
+              name: DF64 Grinder
+              icon: mdi:cog
+              toggle: true
 
       - type: vertical-stack
         cards:
