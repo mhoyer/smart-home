@@ -29,6 +29,10 @@ devices:
     friendly_name: kitchen_e1810_remote_control
   '0x086bd7fffe3fc805':
     friendly_name: kitchen_wireless_control_driver
+  '0xa4c138793b6af8be':
+    friendly_name: kitchen_df64
+  '0xa4c138d3c19bfa83':
+    friendly_name: kitchen_xenia
   '0xccccccfffe932c4c':
     friendly_name: living_switch
   '0x7cb03eaa00aa112a':
@@ -40,6 +44,8 @@ devices:
     friendly_name: living_light_ceiling
   '0x842e14fffe366622':
     friendly_name: living_power_switch_fairy_lights
+  '0x00158d0004738205':
+    friendly_name: living_party_uplight
   '0xa4c13857060eac49':
     friendly_name: sleep_power_switch_fairy_lights
   '0x7cb03eaa00ac909d':
@@ -114,20 +120,14 @@ devices:
     friendly_name: work_3d_printer_switch
   '0xa4c1380282841053':
     friendly_name: work_uap
-  '0xa4c138793b6af8be':
-    friendly_name: work_ethernet_switch
   '0x5c0272fffe857045':
     friendly_name: work_thermostat
   '0xa4c138487445da05':
     friendly_name: '0xa4c138487445da05'
-  '0xa4c138d3c19bfa83':
-    friendly_name: kitchen_xenia
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
   '0x001788010b1e97b6':
     friendly_name: '0x001788010b1e97b6'
-  '0x00158d0004738205':
-    friendly_name: living_party_uplight
 
 groups:
   '1':
