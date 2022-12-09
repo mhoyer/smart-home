@@ -222,6 +222,23 @@ views:
               name: Sternchen
               icon: mdi:string-lights
 
+        - title: Coffee
+          type: entities
+          icon: mdi:coffee-outline
+          entities:
+            - entity: switch.kitchen_xenia
+              name: Xenia
+              icon: mdi:coffee-maker-outline
+              toggle: true
+            - entity: sensor.kitchen_xenia_energy
+              name: Xenia Energy
+            - entity: switch.kitchen_df64
+              name: DF64 Grinder
+              icon: mdi:cog
+              toggle: true
+            - entity: sensor.kitchen_df64_energy
+              name: DF64 Energy
+
       - type: vertical-stack
         cards:
         - title: Audio
@@ -234,19 +251,6 @@ views:
         - type: iframe
           aspect_ratio: 100%
           url: http://lms.tatooine
-
-        - title: Coffee
-          type: entities
-          icon: mdi:coffee-outline
-          entities:
-            - entity: switch.kitchen_xenia
-              name: Xenia
-              icon: mdi:coffee-maker-outline
-              toggle: true
-            - entity: switch.kitchen_df64
-              name: DF64 Grinder
-              icon: mdi:cog
-              toggle: true
 
       - type: vertical-stack
         cards:
