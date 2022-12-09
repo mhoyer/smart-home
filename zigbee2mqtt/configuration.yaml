@@ -1,5 +1,5 @@
 homeassistant: true
-permit_join: true
+permit_join: false
 mqtt:
   base_topic: zigbee2mqtt
   server: mqtt://mosquitto
@@ -126,8 +126,6 @@ devices:
     friendly_name: '0xa4c138487445da05'
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
-  '0x001788010b1e97b6':
-    friendly_name: '0x001788010b1e97b6'
 
 groups:
   '1':
