@@ -12,7 +12,7 @@ function fetch_tags() {
     echo "${docker_response}" \
     | jq -r '.results[].name'
   )
-  if [ -z "${all_tags}"]; then
+  if [ -z "${all_tags}" ]; then
     echo "${docker_response}"
     echo
     echo "Unable to parse JSON response above from https://registry.hub.docker.com/v1/repositories/${image}/tags."
