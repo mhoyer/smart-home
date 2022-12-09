@@ -5,9 +5,10 @@ mqtt:
   server: mqtt://mosquitto
 serial:
   port: /dev/ttyAMA0
+frontend: false
 advanced:
   pan_id: 6755
-  log_level: debug
+  log_level: info
   log_output:
     - console
   baudrate: 115200
