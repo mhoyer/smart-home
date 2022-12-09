@@ -16,5 +16,6 @@ homeassistant/home-assistant_v2.db*
 
 zigbee2mqtt/log
 zigbee2mqtt/state.json
+zigbee2mqtt/database.db
 
 roborock_s5/
