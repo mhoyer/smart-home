@@ -38,7 +38,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/raspberrypi4-homeassistant:2022.12.2
+    image: homeassistant/raspberrypi4-homeassistant:2022.12.3
     restart: always
     environment:
       TZ: "Europe/Berlin"
