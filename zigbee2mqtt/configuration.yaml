@@ -5,7 +5,7 @@ mqtt:
   server: mqtt://mosquitto
 serial:
   port: /dev/ttyAMA0
-frontend: false
+frontend: true
 advanced:
   pan_id: 6755
   log_level: info
@@ -127,7 +127,6 @@ devices:
     friendly_name: '0xa4c138487445da05'
   '0xccccccfffeb49bf7':
     friendly_name: '0xccccccfffeb49bf7'
-
 groups:
   '1':
     friendly_name: kitchen_light_group
