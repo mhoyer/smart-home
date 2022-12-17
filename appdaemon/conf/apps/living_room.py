@@ -7,10 +7,11 @@ light_switch_entity = "sensor.living_switch_action"
 light_group_entity = "input_boolean.appdaemon_light_group_living"
 ceiling_light = "light.living_light_ceiling"
 basket_light = "light.living_basket_light"
+party_uplight = "light.living_party_uplight"
 fairy_lights = "switch.living_power_switch_fairy_lights"
 ambient_lights = [
   basket_light,
-  fairy_lights,
+  party_uplight
 ]
 movie_mode_entity = "input_boolean.appdaemon_movie_mode"
 hb_fan_mode = "input_boolean.appdaemon_fan_mode"
@@ -57,9 +58,9 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       self.mqtt_publish("hushboxctrl/movie_mode", "on")
       self.set_state(hb_fan_mode, state="on")
       self.set_state(hb_fan_speed, state=24)
-      self.turn_off(ceiling_light)
+      self.turn_off(party_uplight)
       time.sleep(0.5)
-      self.turn_off(basket_light)
+      self.turn_off(ceiling_light)
     else:
       self.mqtt_publish("hushboxctrl/movie_mode", "off")
       self.set_state(hb_fan_mode, state="on")
@@ -68,7 +69,7 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       self.run_in(self.turn_off_fan, 150)
       self.turn_on(basket_light)
       time.sleep(0.5)
-      self.turn_on(fairy_lights)
+      self.turn_on(party_uplight)
 
   def slow_down_fan(self, *args, **kwargs):
     self.set_state(hb_fan_speed, state=24)
