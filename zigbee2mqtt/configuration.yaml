@@ -14,6 +14,7 @@ advanced:
   baudrate: 115200
   rtscts: false
   report: false
+  ikea_ota_use_test_url: true
 devices:
   '0x7cb03eaa00adacd7':
     friendly_name: kitchen_light
