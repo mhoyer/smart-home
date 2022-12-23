@@ -1,5 +1,5 @@
 homeassistant: true
-permit_join: false
+permit_join: true
 mqtt:
   base_topic: zigbee2mqtt
   server: mqtt://mosquitto
@@ -43,6 +43,8 @@ devices:
     retain: true
   '0x00158d0004724ead':
     friendly_name: living_ball_light
+    availability:
+      timeout: 3
   '0x14b457fffe67a19c':
     friendly_name: living_light_ceiling
   '0x842e14fffe366622':
