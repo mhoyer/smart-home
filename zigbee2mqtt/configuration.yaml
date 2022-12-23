@@ -127,8 +127,6 @@ devices:
     friendly_name: work_thermostat
   '0xa4c138487445da05':
     friendly_name: '0xa4c138487445da05'
-  '0xccccccfffeb49bf7':
-    friendly_name: '0xccccccfffeb49bf7'
 groups:
   '1':
     friendly_name: kitchen_light_group
