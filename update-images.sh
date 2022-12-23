@@ -34,11 +34,11 @@ function fetch_tags() {
   fi
 
   echo "found $1:$latest_tag (matching the pattern of '$pattern')"
-  sed -i "s|image: ${1}:.*|image: ${1}:${latest_tag}|g" docker-compose.yml
+  sed -i "s|image: ${1}:.*|image: ${1}:${latest_tag}|g" docker-compose.yaml
 }
 
 fetch_tags koenkk/zigbee2mqtt '^[0-9]+\.[0-9]+\.[0-9]+$'
 fetch_tags homeassistant/raspberrypi4-homeassistant '^[0-9]+\.[0-9]+\.[0-9]+$'
 
-git diff docker-compose.yml
+git diff docker-compose.yaml
 
