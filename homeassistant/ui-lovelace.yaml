@@ -16,6 +16,8 @@ views:
               - entity: light.living_light_ceiling
                 name: Decke
                 icon: mdi:ceiling-light
+                type: custom:slider-entity-row
+                toggle: true
               - entity: light.living_basket_light
                 name: Korblampe
                 icon: mdi:lamp
@@ -156,6 +158,11 @@ views:
             - entity: switch.living_power_switch_fairy_lights
               name: Licherkette
               icon: mdi:string-lights
+            - entity: light.living_party_uplight
+              name: Party Deckenfluter
+              icon: mdi:floor-lamp-torchiere
+              type: custom:slider-entity-row
+              toggle: true
             - entity: light.living_ball_light
               name: Das Ball
               icon: mdi:crystal-ball
