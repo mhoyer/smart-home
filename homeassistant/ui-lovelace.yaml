@@ -130,6 +130,11 @@ views:
             entities:
               - sensor.speedtest_ping
               - type: button
+                name: Reload Themes
+                tap_action:
+                  action: call-service
+                  service: frontend.reload_themes
+              - type: button
                 name: Reload Lovelace
                 tap_action:
                   action: call-service
