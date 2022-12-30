@@ -182,6 +182,27 @@ views:
             - entity: input_number.appdaemon_fan_speed
               name: Hushbox Fan Speed
 
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              icon: mdi:volume-minus
+              size: 30px
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                data:
+                  topic: hushboxfancontrol/send_ir_codes
+                  payload: o 0x5EA1D827 0x5EA1D827 0xFFFFFFFFFFFFFFFF 0xFFFFFFFFFFFFFFFF
+            - type: "custom:button-card"
+              icon: mdi:volume-plus
+              size: 30px
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxfancontrol/send_ir_codes
+                  payload: o 0x5EA158A7 0x5EA158A7 0xFFFFFFFFFFFFFFFF 0xFFFFFFFFFFFFFFFF
+
       - type: vertical-stack
         cards:
           - type: iframe

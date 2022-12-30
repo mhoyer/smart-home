@@ -4,14 +4,14 @@ lovelace:
   mode: yaml
   resources:
     - type: module
-      url: /local/zigbee2mqtt-networkmap.js?v=0.7.0
-      # see: https://github.com/azuwis/zigbee2mqtt-networkmap
+      url: /local/zigbee2mqtt-networkmap.js?v=0.7.0 # see: https://github.com/azuwis/zigbee2mqtt-networkmap/releases
     - type: module
-      url: /local/mini-graph-card-bundle.js?v=0.11.0
-      # see: https://github.com/kalkih/mini-graph-card
+      url: /local/mini-graph-card-bundle.js?v=0.11.0 # see: https://github.com/kalkih/mini-graph-card/releases
     - type: module
-      url: /local/slider-entity-row.js?v=17.2.1
-      # see: https://github.com/thomasloven/lovelace-slider-entity-row
+      url: /local/slider-entity-row.js?v=17.2.1 # see: https://github.com/thomasloven/lovelace-slider-entity-row/releases
+    - type: module
+      url: /local/button-card@3.4.2.js # see https://github.com/custom-cards/button-card/releases
+
   dashboards:
     lovelace-lms:
       mode: yaml
