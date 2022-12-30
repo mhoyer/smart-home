@@ -11,6 +11,8 @@ lovelace:
       url: /local/slider-entity-row.js?v=17.2.1 # see: https://github.com/thomasloven/lovelace-slider-entity-row/releases
     - type: module
       url: /local/button-card@3.4.2.js # see https://github.com/custom-cards/button-card/releases
+    - type: module
+      url: /local/swipe-navigation@1.10.0.js # see https://github.com/zanna-37/hass-swipe-navigation/releases
 
   dashboards:
     lovelace-lms:
