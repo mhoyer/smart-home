@@ -49,6 +49,8 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 frontend:
   themes: !include themes.yaml
+  extra_module_url:
+    - /local/card-mod@3.2.0.js
 
 mqtt:
   sensor:
