@@ -182,26 +182,78 @@ views:
             - entity: input_number.appdaemon_fan_speed
               name: Hushbox Fan Speed
 
+# YAMAHA_ON 0x5EA1B847
+# YAMAHA_OFF 0x5EA17887
+# YAMAHA_UP 0x5EA158A7
+# YAMAHA_DOWN 0x5EA1D827
+# YAMAHA_DVD 0x5EA1837C
+# YAMAHA_D_TV 0x5EA12AD5
+
         - type: horizontal-stack
           cards:
             - type: "custom:button-card"
-              icon: mdi:volume-minus
-              size: 30px
-              tap_action:
-                action: call-service
-                service: mqtt.publish
-                data:
-                  topic: hushboxfancontrol/send_ir_codes
-                  payload: o 0x5EA1D827 0x5EA1D827 0xFFFFFFFFFFFFFFFF 0xFFFFFFFFFFFFFFFF
-            - type: "custom:button-card"
-              icon: mdi:volume-plus
-              size: 30px
+              icon: mdi:power
+              size: 50px
+              name: "On"
               tap_action:
                 action: call-service
                 service: mqtt.publish
                 service_data:
-                  topic: hushboxfancontrol/send_ir_codes
-                  payload: o 0x5EA158A7 0x5EA158A7 0xFFFFFFFFFFFFFFFF 0xFFFFFFFFFFFFFFFF
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA1B847
+            - type: "custom:button-card"
+              icon: mdi:radio
+              size: 50px
+              name: "LMS"
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA1837C
+            - type: "custom:button-card"
+              icon: mdi:volume-plus
+              size: 50px
+              name: "Lauter"
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA158A7 0x5EA158A7 0xFFFFFFFFFFFFFFFF
+
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              icon: mdi:power-off
+              name: "Off"
+              size: 50px
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA17887
+            - type: "custom:button-card"
+              icon: mdi:projector
+              size: 50px
+              name: "Movie"
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA12AD5
+            - type: "custom:button-card"
+              icon: mdi:volume-minus
+              size: 50px
+              name: "Leiser"
+              tap_action:
+                action: call-service
+                service: mqtt.publish
+                service_data:
+                  topic: hushboxctrl/send_ir_codes
+                  payload: o 0x5EA1D827 0x5EA1D827 0xFFFFFFFFFFFFFFFF
 
       - type: vertical-stack
         cards:
