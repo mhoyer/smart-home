@@ -27,11 +27,11 @@ User=root
 Group=docker
 WorkingDirectory=$(pwd)
 # Shutdown container (if running) when unit is started
-ExecStartPre=$(which docker-compose) --no-ansi -f docker-compose.yml down
+ExecStartPre=$(which docker-compose) --no-ansi -f docker-compose.yaml down
 # Start container when unit is started
 ExecStart=$(pwd)/startup.sh -d
 # Stop container when unit is stopped
-ExecStop=$(which docker-compose) --no-ansi -f docker-compose.yml down
+ExecStop=$(which docker-compose) --no-ansi -f docker-compose.yaml down
 
 [Install]
 WantedBy=multi-user.target
