@@ -38,7 +38,7 @@ function fetch_tags() {
 }
 
 fetch_tags koenkk/zigbee2mqtt '^[0-9]+\.[0-9]+\.[0-9]+$'
-fetch_tags homeassistant/raspberrypi4-homeassistant '^[0-9]+\.[0-9]+\.[0-9]+$'
+fetch_tags homeassistant/home-assistant '^[0-9]+\.[0-9]+\.[0-9]+$'
 
 git diff docker-compose.yaml
 

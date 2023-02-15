@@ -118,15 +118,6 @@ stream:
 #     still_image_url: http://k-2so/webcam/?action=snapshot
 #     mjpeg_url: http://k-2so/webcam/?action=stream
 
-speedtestdotnet:
-  # server_id: 11519 # see: http://www.speedtestserver.com/
-  scan_interval:
-    minutes: 360
-  monitored_conditions:
-    - ping
-    - download
-    - upload
-
 influxdb:
   host: 192.168.178.3 # r2d2.fritz.box
   port: 8086
