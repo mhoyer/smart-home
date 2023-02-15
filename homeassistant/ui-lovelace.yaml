@@ -115,6 +115,24 @@ views:
 
       - type: vertical-stack
         cards:
+          - type: statistics-graph
+            days_to_show: 2
+            chart_type: line
+            stat_types: mean
+            period: 5minute
+            entities:
+              - entity: sensor.electricity_price_konneritzstrasse_90
+                name: Tibber Strompreis
+          - type: statistics-graph
+            days_to_show: 2
+            chart_type: line
+            stat_types: mean
+            period: 5minute
+            entities:
+              - entity: sensor.power_konneritzstrasse_90
+                name: Stromverbrauch
+      - type: vertical-stack
+        cards:
           - type: weather-forecast
             entity: weather.home
           - type: history-graph
