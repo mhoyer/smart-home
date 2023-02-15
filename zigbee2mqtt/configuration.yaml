@@ -62,12 +62,10 @@ devices:
     friendly_name: sleep_blinds_ctrl_01
   '0x000d6ffffea94dd0':
     friendly_name: sleep_blinds_ctrl_02
-    retain: true
   '0xd0cf5efffeea14b4':
-    friendly_name: sleep_blinds_right
-    retain: true
-  '0x680ae2fffe37b078':
     friendly_name: sleep_blinds_left
+  '0x84fd27fffe5f908a':
+    friendly_name: sleep_blinds_right
   '0xccccccfffea2fddd':
     friendly_name: sleep_switch
     retain: true
