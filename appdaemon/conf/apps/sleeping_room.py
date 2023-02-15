@@ -39,6 +39,11 @@ class SleepingRoomAutomation(hass.Hass):
     if new == "open":
       self.open_blinds()
 
+  def open_blinds_partially(self, *args, **kwargs):
+    self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_left", position=60)
+    time.sleep(2)
+    self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_right")
+
   def open_blinds(self, *args, **kwargs):
     self.call_service("cover/open_cover", entity_id="cover.sleep_blinds_left")
     time.sleep(2)
@@ -49,7 +54,7 @@ class SleepingRoomAutomation(hass.Hass):
     right_state = self.get_state("cover.sleep_blinds_right")
 
     if (left_state == "open"):
-      self.call_service("cover/set_cover_position", entity_id="cover.sleep_blinds_left", position=16)
+      self.call_service("cover/close_cover", entity_id="cover.sleep_blinds_left")
       time.sleep(2)
 
     if (right_state == "open"):
@@ -94,4 +99,4 @@ class SleepingRoomAutomation(hass.Hass):
     if today_is_workday:
       self.run_at(self.open_blinds, work_day_wakeup_time)
     else:
-      self.run_at(self.open_blinds, weekend_wakeup_time)
+      self.run_at(self.open_blinds_partially, weekend_wakeup_time)
