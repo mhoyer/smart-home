@@ -51,6 +51,8 @@ devices:
     friendly_name: living_power_switch_fairy_lights
   '0x00158d0004738205':
     friendly_name: living_party_uplight
+  '0xcc86ecfffe0ff510':
+    friendly_name: living_gigacopper_switch
   '0xa4c13857060eac49':
     friendly_name: sleep_power_switch_fairy_lights
   '0x7cb03eaa00ac909d':
@@ -127,6 +129,8 @@ devices:
     friendly_name: work_uap_switch
   '0x5c0272fffe857045':
     friendly_name: work_thermostat
+  '0xb4e3f9fffe74f601':
+    friendly_name: work_gigacopper_switch
 groups:
   '1':
     friendly_name: kitchen_light_group
