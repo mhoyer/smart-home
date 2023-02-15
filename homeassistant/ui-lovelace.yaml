@@ -547,10 +547,10 @@ views:
           type: entities
           show_header_toggle: true
           entities:
-            # - entity: switch.work_ethernet_switch
-            #   name: Cisco Ethernet Switch
-            #   icon: mdi:ethernet
-            - entity: switch.work_uap
+            - entity: switch.work_ethernet_switch
+              name: Cisco Ethernet Switch
+              icon: mdi:ethernet
+            - entity: switch.work_uap_switch
               name: UniFi Access Point
               icon: mdi:access-point
         - title: Drucker

@@ -20,10 +20,10 @@ views:
             icon: mdi:printer-off
             show_header_toggle: false
             entities:
-            # - entity: switch.work_ethernet_switch
-            #   name: Cisco Ethernet Switch
-            #   icon: mdi:ethernet
-            - entity: switch.work_uap
+            - entity: switch.work_ethernet_switch
+              name: Cisco Ethernet Switch
+              icon: mdi:ethernet
+            - entity: switch.work_uap_switch
               name: UniFi Access Point
               icon: mdi:access-point
             - entity: switch.work_3d_printer_switch

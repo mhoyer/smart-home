@@ -121,12 +121,12 @@ devices:
     friendly_name: work_laser_printer_switch
   '0x60a423fffe652cf6':
     friendly_name: work_3d_printer_switch
+  '0xa4c138487445da05':
+    friendly_name: work_ethernet_switch
   '0xa4c1380282841053':
-    friendly_name: work_uap
+    friendly_name: work_uap_switch
   '0x5c0272fffe857045':
     friendly_name: work_thermostat
-  '0xa4c138487445da05':
-    friendly_name: '0xa4c138487445da05'
 groups:
   '1':
     friendly_name: kitchen_light_group
