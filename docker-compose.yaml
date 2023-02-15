@@ -12,7 +12,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.33.1
+    image: koenkk/zigbee2mqtt:1.33.2
     restart: always
     devices:
       - "/dev/ttyAMA0:/dev/ttyAMA0"
@@ -37,7 +37,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/home-assistant:2023.10.5
+    image: homeassistant/home-assistant:2023.11.3
     restart: always
     environment:
       TZ: "Europe/Berlin"
