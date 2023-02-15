@@ -1,4 +1,5 @@
 appdaemon:
+  production_mode: true
   latitude: 51.32036
   longitude: 12.34161
   elevation: 130
@@ -18,3 +19,5 @@ http:
 admin:
 api:
 hadashboard:
+MQTT:
+  client_topics: NONE
