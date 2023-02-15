@@ -13,8 +13,8 @@ class KitchenAutomation(hass.Hass, mqtt.Mqtt):
     self.listen_state(self.on_light_switch_press, light_switch, attribute="action")
     self.listen_state(self.on_hifi_power_toggle, hifi_power_button, attribute="state")
     # it's actually the pixel 2 charger attached here:
-    self.run_daily(self.daily_turn_on_lights, "23:30:00")
-    self.run_daily(self.daily_turn_off_lights, "00:30:00")
+    self.run_daily(self.daily_turn_on_lights, "12:05:00")
+    self.run_daily(self.daily_turn_off_lights, "13:55:00")
 
   def on_hifi_power_toggle(self, entity, attribute, old, new, kwargs):
     self.mqtt_publish("squeezy_kitchen/hifi_power_toggle", "on")
