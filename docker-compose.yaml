@@ -37,7 +37,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: homeassistant/home-assistant:2023.9.2
+    image: homeassistant/home-assistant:2023.9.3
     restart: always
     environment:
       TZ: "Europe/Berlin"
