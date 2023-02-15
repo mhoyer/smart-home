@@ -23,9 +23,6 @@ views:
                 icon: mdi:lamp
                 type: custom:slider-entity-row
                 toggle: true
-              - entity: switch.living_power_switch_fairy_lights
-                name: Licherkette
-                icon: mdi:string-lights
               - entity: light.living_party_uplight
                 name: Party Deckenfluter
                 icon: mdi:floor-lamp-torchiere
@@ -178,9 +175,6 @@ views:
               icon: mdi:lamp
               type: custom:slider-entity-row
               toggle: true
-            - entity: switch.living_power_switch_fairy_lights
-              name: Licherkette
-              icon: mdi:string-lights
             - entity: light.living_party_uplight
               name: Party Deckenfluter
               icon: mdi:floor-lamp-torchiere
@@ -587,6 +581,9 @@ views:
             - entity: switch.work_3d_printer_switch
               name: 3D-Drucker
               icon: mdi:printer-3d
+            - entity: switch.living_power_switch_fairy_lights
+              name: k-2so power (shutdown first)
+              icon: mdi:alert-octagon
       - title: Heizung
         type: entities
         icon: mdi:home-thermometer-outline
