@@ -28,6 +28,9 @@ views:
                 icon: mdi:floor-lamp-torchiere
                 type: custom:slider-entity-row
                 toggle: true
+              - entity: switch.living_xmas_lights_switch
+                name: Weihnachtsbaum
+                icon: mdi:pine-tree
           - type: entities
             entities:
               - entity: input_boolean.appdaemon_movie_mode

@@ -53,6 +53,8 @@ devices:
     friendly_name: living_party_uplight
   '0xcc86ecfffe0ff510':
     friendly_name: living_gigacopper_switch
+  '0x84fd27fffe9c5cdb':
+    friendly_name: living_xmas_lights_switch
   '0xa4c13857060eac49':
     friendly_name: sleep_power_switch_fairy_lights
   '0x7cb03eaa00ac909d':
