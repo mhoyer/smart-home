@@ -52,9 +52,12 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
     for light in ambient_lights:
       self.turn_off(light)
 
+  recent_basket_light_brightness = 200
   def on_movie_mode_change(self, entity, attribute, old, new, kwargs):
     self.log(f"Change movie mode: {new}")
     if new == "on":
+      self.recent_basket_light_brightness = self.get_state(basket_light, attribute="brightness")
+      self.turn_on(basket_light, brightness=10)
       self.mqtt_publish("hushboxctrl/movie_mode", "on")
       self.set_state(hb_fan_mode, state="on")
       self.set_state(hb_fan_speed, state=24)
@@ -67,8 +70,9 @@ class LivingRoomAutomation(hass.Hass, mqtt.Mqtt):
       self.set_state(hb_fan_speed, state=28)
       self.run_in(self.slow_down_fan, 60)
       self.run_in(self.turn_off_fan, 150)
-      self.turn_on(basket_light)
-      time.sleep(0.5)
+
+      self.turn_on(basket_light, brightness=recent_basket_light_brightness)
+      time.sleep(2)
       self.turn_on(party_uplight)
 
   def slow_down_fan(self, *args, **kwargs):
