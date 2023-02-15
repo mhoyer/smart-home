@@ -12,6 +12,8 @@ class KitchenAutomation(hass.Hass, mqtt.Mqtt):
   def initialize(self):
     self.listen_state(self.on_light_switch_press, light_switch, attribute="action")
     self.listen_state(self.on_hifi_power_toggle, hifi_power_button, attribute="state")
+    # it's actually the pixel 2 charger attached here:
+    self.run_daily(self.daily_turn_on_lights, "23:30:00")
     self.run_daily(self.daily_turn_off_lights, "00:30:00")
 
   def on_hifi_power_toggle(self, entity, attribute, old, new, kwargs):
@@ -30,6 +32,9 @@ class KitchenAutomation(hass.Hass, mqtt.Mqtt):
         self.turn_on(corner_light)
       else:
         self.turn_off(corner_light)
+
+  def daily_turn_on_lights(self, *args, **kwargs):
+    self.turn_on(fairy_lights)
 
   def daily_turn_off_lights(self, *args, **kwargs):
     self.turn_off(fairy_lights)
