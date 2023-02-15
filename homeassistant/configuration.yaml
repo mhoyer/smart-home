@@ -118,9 +118,6 @@ stream:
 #     still_image_url: http://k-2so/webcam/?action=snapshot
 #     mjpeg_url: http://k-2so/webcam/?action=stream
 
-influxdb:
-  host: 192.168.178.3 # r2d2.fritz.box
-  port: 8086
-  database: homeassistant
-  # max_retries: 3
-  default_measurement: state
+prometheus:
+  namespace: ha
+
