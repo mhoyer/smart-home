@@ -42,3 +42,5 @@ fetch_tags homeassistant/raspberrypi4-homeassistant '^[0-9]+\.[0-9]+\.[0-9]+$'
 
 git diff docker-compose.yaml
 
+echo; echo; echo "Starting 'docker-compose pull' in the background as screen session."
+screen -dmS DockerPull docker-compose pull
